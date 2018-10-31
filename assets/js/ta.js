@@ -7,9 +7,9 @@ $(document).ready(function(){
                 $('#back-to-top').fadeOut();
             }
             var st = $(this).scrollTop();
-            var searchResult = $('#queryResult li').first();
+            var searchResult = $('.searchResults').is(":hidden");
             if (st > lastScrollTop) {
-                if(!searchResult.length) {
+                if(searchResult=true) {
                     $('.searchBar').addClass('fadeOut');
                     $('.searchBar').removeClass('fadeIn');
                 }
@@ -73,7 +73,7 @@ $('a[data-mail]').on('click', function() {
 
 $('.searchResults .close').on('click', function(){
     $('.searchResults').addClass('hidden');
-    $('.searchBar').css('height', '0');
+    $('.searchBar').css('height', 'auto');
     $('#query').val('');
 })
 
