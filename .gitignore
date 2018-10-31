@@ -1,0 +1,6 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.DS_Store
+assets/manual_uploads/2016_HD-Dyna_Service_manual.pdf
