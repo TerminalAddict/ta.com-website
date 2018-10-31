@@ -5,8 +5,8 @@ plugins:
     - jekyll-feed
     - jekyll-archives
     - jekyll-seo-tag
-site_name: "Just another Linux geek"
-description: "Just another Linux geek"
+site_name: "Linux and SysAdmin tips and tricks"
+description: "Linux and SysAdmin tips and tricks"
 thumbnails: "/assets/images/posts/thumbnails/"
 post-images: "/assets/images/posts/"
 timezone: Pacific/Auckland

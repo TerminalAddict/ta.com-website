@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<h1 class="headline w-100">{{ page.name }}</h1>
+<h4>{{ page.position }}</h4>
+
+{{ content }}
+
+<h2 class="sub-heading">Posts</h2>
+<div class="list-group w-100">
+  {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+  {% for post in filtered_posts %}
+    <a class="list-group-item list-group-item-action w-100" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+  {% endfor %}
+</div>

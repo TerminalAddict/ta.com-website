@@ -1,0 +1,16 @@
+---
+layout: default
+title: Archives
+---
+<h1>Archive of posts from {{ page.date | date: "%B %Y" }}</h1>
+
+<div id="archives" itemscope itemtype="http://schema.org/Article">
+  <div class="archive-group">
+    <div class="list-group w-100">
+		{% for post in page.posts %}
+		<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
+		<a itemprop="headline" class="list-group-item list-group-item-action w-100" href="{{ site.url }}{{ post.url }}">{{post.title}}</a>
+		{% endfor %}
+    </div>
+  </div>
+</div>

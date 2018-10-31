@@ -34,6 +34,7 @@ $(document).ready(function(){
      $.ajaxSetup({ cache: false });
      $('#query').keyup(function(){
         $('.searchResults').removeClass('hidden');
+        $('.searchBar').css('height', '100%');
         $('#queryResult').html('');
         searchField = $('#query').val();
         expression = new RegExp(searchField, "i");
@@ -70,6 +71,7 @@ $('a[data-mail]').on('click', function() {
 
 $('.searchResults .close').on('click', function(){
     $('.searchResults').addClass('hidden');
+    $('.searchBar').css('height', '0');
     $('#query').val('');
 })
 
