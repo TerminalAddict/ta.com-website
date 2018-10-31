@@ -76,7 +76,7 @@
     <div class="container-fluid" id="fluidcontainer">
       <div class="container">
         <div class="row">
-          <div class="col-md-9" id="pwnzContainer">
+          <div class="col-md-12" id="pwnzContainer">
 
 <!-- main body (loop) -->
 
@@ -84,30 +84,11 @@
 
 <!-- end main body (loop) -->
 
-          </div>
-          <div class="col-md-3"> <!-- sidebar -->
-            <aside>
-              <h4>Categories</h4>
-              <ul class="list-group categoriesList">
-                {% for category in site.categories %}
-                {% capture category_name %}{{ category | first }}{% endcapture %}
-                <li class="list-group-item"><a href="{{ site.url }}/categories/#{{ category_name | slugize }}">{{ category_name | slugsize }}</a></li>
-                {% endfor %}
-              </ul>
-            </aside>
-            <aside>
-              <h4>Archives</h4>
-              <ul class="list-group archivesList">
-                  {% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y %b'"  %}
-                  {% for yearMonth in postsByYearMonth %}
-                  <li class="list-group-item py-1">
-                      {% for item in yearMonth.items limit: 1 %}
-                      <a href="{{ site.url }}/{{ item.date | date: '%Y/%m' }}">{{ yearMonth.name }}</a>
-                      {% endfor %}
-                  </li>
-                  {% endfor %}
-              </ul>
-            </aside>
+            <div class="container-fluid pb-5">
+                <div class="container">
+                {% include post_comments.html %}
+                </div>
+            </div>
           </div>
         </div>
       </div>

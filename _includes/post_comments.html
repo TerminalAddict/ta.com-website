@@ -1,0 +1,67 @@
+  <section class="post_comments">
+    {% if site.repository and site.staticman.branch %}
+      {% if site.data.comments[page.slug] %}
+        <!-- Start static comments -->
+        <div id="comments" class="js-comments">
+          <h3 class="headline">Comments</h3>
+          {% assign comments = site.data.comments[page.slug] | sort %}
+          {% for comment in comments %}
+            {% assign avatar = comment[1].avatar %}
+            {% assign email = comment[1].email %}
+            {% assign name = comment[1].name %}
+            {% assign url = comment[1].url %}
+            {% assign date = comment[1].date %}
+            {% assign message = comment[1].message %}
+            {% include comment.html index=forloop.index avatar=avatar email=email name=name url=url date=date message=message %}
+          {% endfor %}
+        </div>
+        <!-- End static comments -->
+      {% endif %}
+    {% endif %}
+
+      {% if page.comments == true %}
+      <!-- Start new comment form -->
+      <h3 class="headline">Leave a Comment</h3>
+      <form id="comment-form" class="w-100 shadow-lg bg-white p-2 post__comments-form" method="post" action="https://comments.netent.co.nz/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
+      <blockquote class="blockquote  d-flex flex-column">
+          <p class="p-0 m-0">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+          <p class="p-0 m-0">You won't be notified of replies, so come back and visit again!
+      </blockquote>
+        <fieldset class="p-2">
+          <label for="comment-form-message"><small>(<a target="_blank" href="https://daringfireball.net/projects/markdown/">Markdown</a> is supported)</small></label>
+          <textarea class="w-100 rounded p-2" required rows="3" id="comment-form-message" name="fields[message]" tabindex="1" placeholder="* My comment is ..."></textarea>
+        </fieldset>
+        <fieldset class="p-2">
+          <input class="w-100 rounded p-2" required type="text" id="comment-form-name" name="fields[name]" tabindex="2" placeholder="* My name is ..." />
+        </fieldset>
+        <fieldset class="p-2">
+          <input class="w-100 rounded p-2" required type="email" id="comment-form-email" name="fields[email]" tabindex="3" placeholder="* My email is ..." />
+        </fieldset>
+        <fieldset class="p-2">
+          <input class="w-100 rounded p-2" type="url" id="comment-form-url" name="fields[url]" tabindex="4" placeholder="My website is ... (optional)"/>
+        </fieldset>
+        <fieldset class="hidden">
+            <p class="onoff">
+            <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email" checked />
+            <label for="comment-form-reply"><!----></label>
+            </p>
+            <span class="notifyText">Notify me of replies</span>
+        </fieldset>
+        <fieldset class="hidden">
+          <input type="hidden" name="options[slug]" value="{{ page.slug }}">
+          <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
+          <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
+          <input type="hidden" name="fields[hidden]"/>
+        </fieldset>
+        <!-- Start comment form alert messaging -->
+        <p class="hidden js-notice text-white p-3 w-100 rounded">
+        <span class="js-notice-text"><!----></span>
+        </p>
+        <!-- End comment form alert messaging -->
+        <fieldset>
+          <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn-primary">Submit Comment</button>
+        </fieldset>
+      </form>
+    <!-- End new comment form -->
+    {% endif %}
+  </section>
