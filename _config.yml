@@ -1,0 +1,80 @@
+url: https://terminaladdict.com
+baseurl: /
+plugins: 
+    - jekyll-paginate-v2
+    - jekyll-feed
+    - jekyll-archives
+    - jekyll-seo-tag
+site_name: "Just another Linux geek"
+description: "Just another Linux geek"
+thumbnails: "/assets/images/posts/thumbnails/"
+post-images: "/assets/images/posts/"
+timezone: Pacific/Auckland
+incremental: false
+sass:
+    load_paths:
+        - _sass
+        - node_modules
+        - assets/css
+        - assets/vendor
+    style: compressed
+exclude: [node_modules, Gemfile, package.json, package-lock.json, .gitignore, README.md, ctl.sh, static_prototype, mogrify_images_to_400px_wide.sh, staticman.yml, .jekyll-metadata]
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: "true"
+      author: "paul"
+      image: "no-image.png"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+collections:
+    authors:
+        type: "authors"
+        layout: "author"
+        output: true
+pagination:
+    enabled: true
+    title: ':title - page :num'
+    per_page: 10
+    collection: 'posts'
+    sort_reverse: true
+    permalink: '/page/:num/'
+    sort_field: 'date'
+    trail:
+        before: 2
+        after: 3
+
+assets:
+  compress:
+    css:  sass
+    js:   uglifier
+repository: "TerminalAddict/ta.com-website"
+staticman:
+    branch: "master"
+jekyll-archives:
+  enabled: all
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+jekyll-seo-tag:
+    defaults:
+        - scope:
+            path: ""
+            values:
+                image: "/assets/images/ta-bearded.png"
+    image:
+        path: "/assets/images/posts"
