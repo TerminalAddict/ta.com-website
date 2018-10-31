@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title id="pafeTitle">TA Skeleton</title>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="dist/ta_custom.css">
+  </head>
+  <body>
+    <div class="container-fluid w-100 terminalBG">
+      <div class="terminalcontainer p-1">
+        <div class="terminal">
+          <h1>paul@terminaladdict.com</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="searchBar container-fluid fixed-top p-3 topbar">
+      <div class="container">
+        <div class="terminalBG d-flex flex-row rounded border p-2 align-items-center">
+          <a class="ta_logo d-flex" href="#" data-toggle="tooltip" title="Paul Willard - Systems and Networks Engineer / Manager">
+          <img alt="Paul Willard" class="d-flex align-top" src="data:image/png;base64,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" />
+          </a>
+          <input type="text" name="query" id="query" placeholder="Search this website ..." class="form-control d-flex" />
+        </div>
+      </div>
+      <div class="d-flex flex-column hidden searchResults">
+        <div class="closeContainer d-inline-flex flex-row flex-row-reverse bg-white ml-auto mr-o p-2">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">Close search results &times;</span>
+          </button>
+        </div>
+        <ul class="list-group d-flex flex-column" id="queryResult">
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="container-fluid" id="fluidcontainer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9" id="pwnzContainer">
+
+            <!-- main body (loop) -->
+
+            <article id="post-12345678" class="bg-white rounded border mb-3">
+              <div class="row">
+                <div class="col-md-3 featuredImage">
+                  <span class="tag">Linux</span>
+                  <span class="tag">php</span>
+                  <span class="tag">Mikrotik</span>
+                  <span class="tag">bash</span>
+                  <span class="tag">development</span>
+                </div>
+                <div class="col-md-9">
+                  <div class="row p-2">
+                    <div class="col-md-12">
+                      <!-- post meta -->
+                      <h2 class="entry-title"><a href="#">Mountain biking with Helen</a></h2>
+                      <p class="post-meta">by <span class="author vcard"><a href="#" title="Posts by Paul Willard" rel="author">Paul Willard</a></span>  |  <time datetime="2015-04-27T13:37:54+13:00" itemprop="datePublished">April 27, 2015 at 12:37 AM</time>  |  <a href="#" rel="category tag">General Life</a>  </p>
+                    </div>
+                    <div class="col-md-12">
+                      <!-- post excerpt -->
+                      <p class="post-excerpt p-2">On April 26, 2015 Helen and I went to Rotorua for some mountain biking, followed by a soak in the stream at kerosene creek. This is the video. Music: "Happy feet" performed by Kermit the Frog. "Life's a happy song" performed by Kermit the Frog and Bret McKenzie... <a href="#">read more &raquo;</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article id="post-12345678" class="bg-white rounded border mb-3">
+              <div class="row">
+                <div class="col-md-3 featuredImage">
+                  <span class="tag">Linux</span>
+                  <span class="tag">php</span>
+                  <span class="tag">Mikrotik</span>
+                  <span class="tag">bash</span>
+                  <span class="tag">development</span>
+                </div>
+                <div class="col-md-9">
+                  <div class="row p-2">
+                    <div class="col-md-12">
+                      <!-- post meta -->
+                      <h2 class="entry-title"><a href="#">Mountain biking with Helen</a></h2>
+                      <p class="post-meta">by <span class="author vcard"><a href="#" title="Posts by Paul Willard" rel="author">Paul Willard</a></span>  |  <time datetime="2015-04-27T13:37:54+13:00" itemprop="datePublished">April 27, 2015 at 12:37 AM</time>  |  <a href="#" rel="category tag">General Life</a>  </p>
+                    </div>
+                    <div class="col-md-12">
+                      <!-- post excerpt -->
+                      <p class="post-excerpt p-2">On April 26, 2015 Helen and I went to Rotorua for some mountain biking, followed by a soak in the stream at kerosene creek. This is the video. Music: "Happy feet" performed by Kermit the Frog. "Life's a happy song" performed by Kermit the Frog and Bret McKenzie... <a href="#">read more &raquo;</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article id="post-12345678" class="bg-white rounded border mb-3">
+              <div class="row">
+                <div class="col-md-3 featuredImage">
+                  <span class="tag">Linux</span>
+                  <span class="tag">php</span>
+                  <span class="tag">Mikrotik</span>
+                  <span class="tag">bash</span>
+                  <span class="tag">development</span>
+                </div>
+                <div class="col-md-9">
+                  <div class="row p-2">
+                    <div class="col-md-12">
+                      <!-- post meta -->
+                      <h2 class="entry-title"><a href="#">Mountain biking with Helen</a></h2>
+                      <p class="post-meta">by <span class="author vcard"><a href="#" title="Posts by Paul Willard" rel="author">Paul Willard</a></span>  |  <time datetime="2015-04-27T13:37:54+13:00" itemprop="datePublished">April 27, 2015 at 12:37 AM</time>  |  <a href="#" rel="category tag">General Life</a>  </p>
+                    </div>
+                    <div class="col-md-12">
+                      <!-- post excerpt -->
+                      <p class="post-excerpt p-2">On April 26, 2015 Helen and I went to Rotorua for some mountain biking, followed by a soak in the stream at kerosene creek. This is the video. Music: "Happy feet" performed by Kermit the Frog. "Life's a happy song" performed by Kermit the Frog and Bret McKenzie... <a href="#">read more &raquo;</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article id="post-12345678" class="bg-white rounded border mb-3">
+              <div class="row">
+                <div class="col-md-3 featuredImage">
+                  <span class="tag">Linux</span>
+                  <span class="tag">php</span>
+                  <span class="tag">Mikrotik</span>
+                  <span class="tag">bash</span>
+                  <span class="tag">development</span>
+                </div>
+                <div class="col-md-9">
+                  <div class="row p-2">
+                    <div class="col-md-12">
+                      <!-- post meta -->
+                      <h2 class="entry-title"><a href="#">Mountain biking with Helen</a></h2>
+                      <p class="post-meta">by <span class="author vcard"><a href="#" title="Posts by Paul Willard" rel="author">Paul Willard</a></span>  |  <time datetime="2015-04-27T13:37:54+13:00" itemprop="datePublished">April 27, 2015 at 12:37 AM</time>  |  <a href="#" rel="category tag">General Life</a>  </p>
+                    </div>
+                    <div class="col-md-12">
+                      <!-- post excerpt -->
+                      <p class="post-excerpt p-2">On April 26, 2015 Helen and I went to Rotorua for some mountain biking, followed by a soak in the stream at kerosene creek. This is the video. Music: "Happy feet" performed by Kermit the Frog. "Life's a happy song" performed by Kermit the Frog and Bret McKenzie... <a href="#">read more &raquo;</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- end main body (loop) -->
+
+          </div>
+          <div class="col-md-3">
+            <aside>
+              <h4>Categories</h4>
+              <ul class="list-group">
+                <li class="list-group-item">Linux</li>
+                <li class="list-group-item">PHP</li>
+                <li class="list-group-item">Mikrotik</li>
+                <li class="list-group-item">Bash</li>
+              </ul> 
+            </aside>
+            <aside>
+              <h4>Archives</h4>
+              <ul class="list-group">
+                <li class="list-group-item">March</li>
+                <li class="list-group-item">April</li>
+                <li class="list-group-item">May</li>
+                <li class="list-group-item">December</li>
+              </ul> 
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="dist/ta.js" ></script>
+  </body>
+</html>
