@@ -57,7 +57,9 @@ $(document).ready(function(){
      
      $("span.tag").each(function(){
         var rand_fsize = Math.floor(Math.random() * 4) + 1;
+        var rand_color = Math.floor(Math.random() * 5) + 1;
         $(this).addClass('display-'+rand_fsize);
+        $(this).addClass('color-'+rand_color);
      }); 
 });
 

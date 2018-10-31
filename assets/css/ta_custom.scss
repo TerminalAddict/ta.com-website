@@ -83,6 +83,7 @@ div.typewriter {
   color: #ccc;
   max-height: 300px;
   max-width: 97%;
+  opacity: 0.3;
 }
 
 span.tag {
@@ -397,3 +398,14 @@ span.notifyText {
     top: -7px;
 }
 /* on/off */
+
+.color-1 { @extend .text-primary; }
+.color-2 { @extend .text-success; }
+.color-3 { @extend .text-danger; }
+.color-4 { @extend .text-warning; }
+.color-5 { @extend .text-info; }
+.color-6 { @extend .text-secondary; }
+
+.featuredImage span.tag {
+    text-shadow: 2px 2px 5px #000;
+}
