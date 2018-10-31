@@ -47,7 +47,7 @@ UpdateNPM() {
 }
 
 BuildBundledJS() {
-    cat $VENDOR_DIR/jquery.min.js <(echo) $VENDOR_DIR/popper.min.js <(echo) $VENDOR_DIR/bootstrap.min.js <(echo) assets/js/ta_nav.min.js <(echo) assets/js/pw.min.js <(echo) > $JSBUNDLE_DIR/bundle.js
+    cat $VENDOR_DIR/jquery.min.js <(echo) $VENDOR_DIR/popper.min.js <(echo) $VENDOR_DIR/bootstrap.min.js <(echo) assets/js/ta.min.js <(echo)  > $JSBUNDLE_DIR/bundle.js
 }
 
 JekyllBuild() {
