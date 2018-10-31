@@ -1,0 +1,23 @@
+comments:
+  allowedFields     : ['name', 'email', 'url', 'message']
+  branch            : "master"
+  commitMessage     : "New comment."
+  filename          : "comment-{@timestamp}"
+  format            : "yaml"
+  moderation        : true
+  path              : "_data/comments/{options.slug}"
+  allowedOrigins    : ["terminaladdict.com"]
+  pullRequestBody   : "Hey Paul,\n\nHere's a new entry for your approval. :tada:\n\nMerge the pull request to accept it, or close it to send it away.\n\n:heart: Your friend [Staticman](https://comments.netent.co.nz) :muscle:\n\n---\n"
+  timezone          : Pacific/Auckland
+  requiredFields    : ['name', 'email', 'message']
+  transforms:
+          email     : md5
+  name              : "terminaladdict.com Blog"
+  notifications.enabled : true
+  generatedFields:
+    date:
+      type          : "date"
+      options:
+        format      : "iso8601"
+  apiKey            : "mO0YqB+vHB5q7d41nZq8Ponusvc8X5eB4FWfNm2IHQIezbwPJM2pfRbhM+hMOwtScMQMS09/UIdyUwYt7e3COLibZFicTmxuPLhY5tex5SZNvbvgPZuJvC9e2PSwFGPESMVuM9maJGQbA22XVWt6UOPxOJOi/0gp3cqF3cfGwjCnCz35PnSqIu1Jb8ZkYnuWP1sui/5tz+pdc0o5nTlkAE6A5K5yRm+ZNdowCal3EIATvmZtktOmZsXqXABas0LTSZnwtZf04ojKz8VYap8IYpejbgkzPJOSC1RpufoD9I4RWJ+TgMRY5wqN2ecrsYVxkDxieK/JjiE9hoxWPUVctA=="
+  domain            : "0WVKBMNb7jV3PkGnLOHxFkxSdOSp0yXOcQei5iYm3QWJROCb7F2QEMvidn4nLW0l9+7EtAkNkotfIrllXwwgLD+qk57JrUm78AFnsP5oLEiyuF4UH3wsy4c7DKt41qCoDP7hgF6auhJPcy890aqnEmnkkMlP8Q+D1lk7a6juFQQaD6zIhsLGhcfymbheFhNsXW7QGQ5bmzko6M6bucoNqDQkW2JKw7jc4idOxQAFR+/+fcJL66gtON9E4ghYT+AxIXla7EPjZ5eeL01ADbEGsRHaOSDNa0ONubyItcXN4yTVJVz/r1tZZY861IPHtQzYkROuClLEGpxtOdAeyHNxHA=="
