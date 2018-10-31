@@ -1,0 +1,136 @@
+@font-face {
+font-family: 'TerminalAddict';
+    src:url('https://fonts.netent.co.nz/TerminalAddict.ttf') format("truetype");
+}
+
+body {
+  background-image: url("/assets/images/bg_greygrid.png");
+  background-position: left top;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+*,
+:focus {
+    outline: 0!important;
+}
+
+.terminal h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  font-size: 2em;
+  font-family: monospace;
+  color: #32CD32;
+  line-height: 1;
+  display: inline-block;
+}
+
+@media (max-width:768px) {
+    .terminal h1 {
+        font-size: 5vw;
+    }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+div.typewriter {
+    display: inline-block;
+    margin: 0;
+    padding:0;
+    background-color: black;
+}
+
+.terminalcontainer {
+    display: inline-block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.searchResults {
+  z-index: 98;
+  position: relative;
+}
+
+.searchResults .closeContainer {
+  border-width: 1px 1px 0 1px;
+  border-style: groove;
+  border-color: #dee2e6;
+  border-radius: 5px 5px 0 0;
+  margin-bottom: -1px;
+  z-index: 99;
+}
+
+.featuredImage {
+  min-height: 200px;
+  overflow: hidden;
+  color: #ccc;
+  max-height: 300px;
+  max-width: 97%;
+}
+
+span.tag {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    display: block;
+    line-height: 1em;
+    font-weight: bolder;
+}
+
+@media (max-width: 844px) {
+    .featuredImage {
+        background-origin: content-box !important;
+        border-radius: .25rem .25rem 0 0;
+    }
+    span.tag { display: inline-block; }
+}
+.terminalBG { 
+  background: rgba(52,58,64,0.9); 
+}
+
+.nav-up {
+  top: -40px;
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fadeIn {
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.searchBar {
+  padding-top: 4rem !important;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+#fluidcontainer {
+  padding-top: 6rem !important;
+}

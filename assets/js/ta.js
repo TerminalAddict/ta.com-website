@@ -37,7 +37,7 @@ $(document).ready(function(){
         $('#queryResult').html('');
         searchField = $('#query').val();
         expression = new RegExp(searchField, "i");
-        $.getJSON('dist/search.json', function(data) {
+        $.getJSON('assets/search.json', function(data) {
             $.each(data, function(key, value){
                 if (value.url.search(expression) != -1 || value.content.search(expression) != -1 || value.title.search(expression) != -1) {
                     var n = value.content.search(expression)-50;
@@ -48,7 +48,7 @@ $(document).ready(function(){
                     } else {
                         var highlight = excerpt;
                     }
-                    $('#queryResult').append('<li class="list-group-item link-class"><img src="images/search.svg" alt="search" class="searchIcon" /><a class="pl-5" href="'+value.url+'">'+value.title+'<\/a><span class="text-muted"> ...'+highlight+'... <\/span><a href="'+value.url+'">read more &rArr;<\/a><\/li>');
+                    $('#queryResult').append('<li class="list-group-item link-class"><img src="/assets/images/search.svg" alt="search" class="searchIcon" /><a class="pl-5" href="'+value.url+'">'+value.title+'<\/a><span class="text-muted"> ...'+highlight+'... <\/span><a href="'+value.url+'">read more &rArr;<\/a><\/li>');
                 }
             });
         });

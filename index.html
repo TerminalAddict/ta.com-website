@@ -1,1 +1,65 @@
-Hi
+---
+layout: frontpage
+image: ta-bearded.png
+pagination:
+    enabled: true
+---
+{% for post in paginator.posts %}
+	{% if post %}
+		{% assign categories = post.categories %}
+	{% else %}
+		{% assign categories = page.categories %}
+	{% endif %}
+{% assign author = site.authors | where: 'short_name', page.author | first %}
+
+            <article class="postSnippet bg-white rounded border mb-3" itemscope itemtype="http://schema.org/Article">
+              <div class="row">
+                <div class="col-md-3 featuredImage">
+                  {% for category in categories %}
+                  <span class="tag" rel="category tag">{{category|slugize}}</span>
+                  {% endfor %}
+                </div>
+                <div class="col-md-9">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <!-- post meta -->
+                      <h2 class="entry-title"><a itemprop="headline" href="{{site.url}}{{post.url}}">{{post.title}}</a></h2>
+                      <p class="post-meta">by <span class="author vcard" itemprop="author">{% if author %}<a href="{{ site.url }}{{ author.url }}" title="Posts by {{ author.name }}" rel="author">{{ author.name }}</a>{% endif %}</span>  |  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>  |  {% for category in categories %}<a href="{{ site.url }}/categories/#{{category|slugize}}" rel="category tag">{{category}}</a> {% endfor %}</p>
+                    </div>
+                    <div class="col-md-12">
+                      <!-- post excerpt -->
+                      <div class="post-excerpt p-2" itemprop="articleBody">{{ post.excerpt }} ... <a href="{{site.url}}{{post.url}}">read more &raquo;</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+{% endfor %}
+
+    <!-- Pagination links -->
+    <nav class="mx-auto" aria-label="Blog pagination">
+        <ul class="pagination  justify-content-center pagination-sm">
+        {% if paginator.previous_page %}
+            <li class="page-item">
+                <a class="page-link" href="{{ site.url }}{{ paginator.previous_page_path }}">Previous</a>
+            </li>
+        {% endif %}
+        {% if paginator.page_trail %}
+            {% for trail in paginator.page_trail %}
+            <li class="page-item">
+                <a class="page-link {% if trail.num == paginator.page %} bg-primary text-white{% endif %}" href="{{ site.url }}{{ trail.path }}">{{ trail.num }}</a>
+            </li>
+            {% endfor %}
+        {% endif %}
+            <li class="page-item">
+                <a class="page-link text-nowrap">of {{ paginator.total_pages }}</a>
+            </li>
+        {% if paginator.next_page %}
+            <li class="page-item">
+                <a class="page-link" href="{{ site.url }}{{ paginator.next_page_path }}">Next</a>
+            </li>
+        {% endif %}
+        </ul>
+    </nav>
+    <!-- end pagination link -->

@@ -3,9 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title id="pageTitle">TA Skeleton</title>
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="dist/ta_custom.css">
+
+    {%  include google_analytics.html %}
+
+    <title id="pageTitle">{{ page.title }}</title>
+	{% capture styles %}
+    {% include main.css %}
+    {% endcapture %}
+	<style>
+	{{ styles | scssify }}
+	</style>
+    
+	{% feed_meta %}
+	{% seo title=false %}
+	
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.url }}/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ site.url }}/assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ site.url }}/assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ site.url }}/assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ site.url }}/assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ site.url }}/assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ site.url }}/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="{{ site.url }}/assets/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ site.url }}/assets/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="{{ site.url }}/assets/favicon/favicon.ico" />
+
+    <meta property="fb:app_id" content="222058004471035" />
+    <meta property="fb:profile_id" content="100000348834111" />
+    <meta property="fb:admins" content="100000348834111" />
+    <meta property="og:image" content="{{ site.url }}{{ site.thumbnails }}{{page.image}}" />
+    <meta property="og:type" content="article" />
+
   </head>
   <body>
     <div class="container-fluid w-100 terminalBG">
@@ -42,138 +78,41 @@
         <div class="row">
           <div class="col-md-9" id="pwnzContainer">
 
-            <!-- main body (loop) -->
+<!-- main body (loop) -->
 
-            <article id="post-12345678" class="bg-white rounded border mb-3">
-              <div class="row">
-                <div class="col-md-3 featuredImage">
-                  <span class="tag">Linux</span>
-                  <span class="tag">php</span>
-                  <span class="tag">Mikrotik</span>
-                  <span class="tag">bash</span>
-                  <span class="tag">development</span>
-                </div>
-                <div class="col-md-9">
-                  <div class="row p-2">
-                    <div class="col-md-12">
-                      <!-- post meta -->
-                      <h2 class="entry-title"><a href="#">Mountain biking with Helen</a></h2>
-                      <p class="post-meta">by <span class="author vcard"><a href="#" title="Posts by Paul Willard" rel="author">Paul Willard</a></span>  |  <time datetime="2015-04-27T13:37:54+13:00" itemprop="datePublished">April 27, 2015 at 12:37 AM</time>  |  <a href="#" rel="category tag">General Life</a>  </p>
-                    </div>
-                    <div class="col-md-12">
-                      <!-- post excerpt -->
-                      <p class="post-excerpt p-2">On April 26, 2015 Helen and I went to Rotorua for some mountain biking, followed by a soak in the stream at kerosene creek. This is the video. Music: "Happy feet" performed by Kermit the Frog. "Life's a happy song" performed by Kermit the Frog and Bret McKenzie... <a href="#">read more &raquo;</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
+{{content}}
 
-            <article id="post-12345678" class="bg-white rounded border mb-3">
-              <div class="row">
-                <div class="col-md-3 featuredImage">
-                  <span class="tag">Linux</span>
-                  <span class="tag">php</span>
-                  <span class="tag">Mikrotik</span>
-                  <span class="tag">bash</span>
-                  <span class="tag">development</span>
-                </div>
-                <div class="col-md-9">
-                  <div class="row p-2">
-                    <div class="col-md-12">
-                      <!-- post meta -->
-                      <h2 class="entry-title"><a href="#">Mountain biking with Helen</a></h2>
-                      <p class="post-meta">by <span class="author vcard"><a href="#" title="Posts by Paul Willard" rel="author">Paul Willard</a></span>  |  <time datetime="2015-04-27T13:37:54+13:00" itemprop="datePublished">April 27, 2015 at 12:37 AM</time>  |  <a href="#" rel="category tag">General Life</a>  </p>
-                    </div>
-                    <div class="col-md-12">
-                      <!-- post excerpt -->
-                      <p class="post-excerpt p-2">On April 26, 2015 Helen and I went to Rotorua for some mountain biking, followed by a soak in the stream at kerosene creek. This is the video. Music: "Happy feet" performed by Kermit the Frog. "Life's a happy song" performed by Kermit the Frog and Bret McKenzie... <a href="#">read more &raquo;</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article id="post-12345678" class="bg-white rounded border mb-3">
-              <div class="row">
-                <div class="col-md-3 featuredImage">
-                  <span class="tag">Linux</span>
-                  <span class="tag">php</span>
-                  <span class="tag">Mikrotik</span>
-                  <span class="tag">bash</span>
-                  <span class="tag">development</span>
-                </div>
-                <div class="col-md-9">
-                  <div class="row p-2">
-                    <div class="col-md-12">
-                      <!-- post meta -->
-                      <h2 class="entry-title"><a href="#">Mountain biking with Helen</a></h2>
-                      <p class="post-meta">by <span class="author vcard"><a href="#" title="Posts by Paul Willard" rel="author">Paul Willard</a></span>  |  <time datetime="2015-04-27T13:37:54+13:00" itemprop="datePublished">April 27, 2015 at 12:37 AM</time>  |  <a href="#" rel="category tag">General Life</a>  </p>
-                    </div>
-                    <div class="col-md-12">
-                      <!-- post excerpt -->
-                      <p class="post-excerpt p-2">On April 26, 2015 Helen and I went to Rotorua for some mountain biking, followed by a soak in the stream at kerosene creek. This is the video. Music: "Happy feet" performed by Kermit the Frog. "Life's a happy song" performed by Kermit the Frog and Bret McKenzie... <a href="#">read more &raquo;</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article id="post-12345678" class="bg-white rounded border mb-3">
-              <div class="row">
-                <div class="col-md-3 featuredImage">
-                  <span class="tag">Linux</span>
-                  <span class="tag">php</span>
-                  <span class="tag">Mikrotik</span>
-                  <span class="tag">bash</span>
-                  <span class="tag">development</span>
-                </div>
-                <div class="col-md-9">
-                  <div class="row p-2">
-                    <div class="col-md-12">
-                      <!-- post meta -->
-                      <h2 class="entry-title"><a href="#">Mountain biking with Helen</a></h2>
-                      <p class="post-meta">by <span class="author vcard"><a href="#" title="Posts by Paul Willard" rel="author">Paul Willard</a></span>  |  <time datetime="2015-04-27T13:37:54+13:00" itemprop="datePublished">April 27, 2015 at 12:37 AM</time>  |  <a href="#" rel="category tag">General Life</a>  </p>
-                    </div>
-                    <div class="col-md-12">
-                      <!-- post excerpt -->
-                      <p class="post-excerpt p-2">On April 26, 2015 Helen and I went to Rotorua for some mountain biking, followed by a soak in the stream at kerosene creek. This is the video. Music: "Happy feet" performed by Kermit the Frog. "Life's a happy song" performed by Kermit the Frog and Bret McKenzie... <a href="#">read more &raquo;</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- end main body (loop) -->
+<!-- end main body (loop) -->
 
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3"> <!-- sidebar -->
             <aside>
               <h4>Categories</h4>
-              <ul class="list-group">
-                <li class="list-group-item">Linux</li>
-                <li class="list-group-item">PHP</li>
-                <li class="list-group-item">Mikrotik</li>
-                <li class="list-group-item">Bash</li>
-              </ul> 
+              <ul class="list-group categoriesList">
+                {% for category in site.categories %}
+                {% capture category_name %}{{ category | first }}{% endcapture %}
+                <li class="list-group-item"><a href="{{ site.url }}/categories/#{{ category_name | slugize }}">{{ category_name | slugsize }}</a></li>
+                {% endfor %}
+              </ul>
             </aside>
             <aside>
               <h4>Archives</h4>
-              <ul class="list-group">
-                <li class="list-group-item">March</li>
-                <li class="list-group-item">April</li>
-                <li class="list-group-item">May</li>
-                <li class="list-group-item">December</li>
-              </ul> 
+              <ul class="list-group archivesList">
+                  {% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y %b'"  %}
+                  {% for yearMonth in postsByYearMonth %}
+                  <li class="list-group-item py-1">
+                      {% for item in yearMonth.items limit: 1 %}
+                      <a href="{{ site.url }}/{{ item.date | date: '%Y/%m' }}">{{ yearMonth.name }}</a>
+                      {% endfor %}
+                  </li>
+                  {% endfor %}
+              </ul>
             </aside>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
-    <script src="dist/ta.js" ></script>
+    <script src="assets/js/bundle.js"></script>
   </body>
 </html>
