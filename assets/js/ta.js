@@ -61,6 +61,9 @@ $(document).ready(function(){
         $(this).addClass('display-'+rand_fsize);
         $(this).addClass('color-'+rand_color);
      }); 
+    $('a[target="_blank"').each(function() {
+        $(this).attr('rel', 'noreferrer noopener');
+    })
 });
 
 $(".ta_logo").mouseover(function(){
@@ -82,6 +85,7 @@ $('img[rel="lightbox"]').on('click', function() {
     $('#lightboxModalBody').html('<img src="' + url +'" alt="" class="w-100" \/>');
     $('#lightboxModal').modal('show');
 });
+
 
 // Static comments
 (function ($) {

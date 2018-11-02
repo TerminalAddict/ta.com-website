@@ -1,6 +1,7 @@
 ---
 layout: frontpage
 image: ta-bearded.png
+title: "Linux and SysAdmin tips and tricks"
 pagination:
     enabled: true
 ---
@@ -12,19 +13,29 @@ pagination:
 	{% endif %}
     {% assign author = site.authors | where: 'short_name', page.author | first %}
 
-            <article class="postSnippet bg-white rounded border mb-3" itemscope itemtype="http://schema.org/Article">
-              <div class="row">
+			<article class="postSnippet bg-white rounded border mb-3" itemscope itemtype="http://schema.org/Article">
+              <div class="row w-100 m-0 p-0">
                 <div class="col-md-12">
                   <div class="row p-3 w-100">
-                    <div class="col-md-12">
+                    <div class="col-md-12 bg-white">
                       <!-- post meta -->
-                      <h2 class="entry-title"><a itemprop="headline" href="{{site.url}}{{post.url}}">{{post.title}}</a></h2>
-                      <p class="post-meta">by <span class="author vcard" itemprop="author">{% if author %}<a href="{{ site.url }}{{ author.url }}" title="Posts by {{ author.name }}" rel="author">{{ author.name }}</a>{% endif %}</span>  |  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>  |  {% for category in categories %}<a href="{{ site.url }}/categories/#{{category|slugize}}" rel="category
-                      tag">{{category}}</a>{% if forloop.last != true %},{% endif %} {% endfor %}</p>
+                      <h2 class="entry-title"><a itemprop="url mainEntityOfPage" href="{{site.url}}{{post.url}}"><span itemprop="headline">{{post.title}}</span></a></h2>
+                      <p class="post-meta">by 
+                      <span class="author vcard" itemprop="author">
+                          {% if author %}<a href="{{ site.url }}{{ author.url }}" title="Posts by {{ author.name }}" rel="author">
+                            <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                                <span itemprop="name" class="bg-white dark-blue-link">{{ author.name }}</span>
+                                <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject" class="hidden">
+                                    <link itemprop="url" href="{{ site.url }}{{author.pic}}" />
+                                </span>
+                            </span>
+                          </a>{% endif %}
+                      </span>  |  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ post.date | date_to_string }}</time>  |  {% for category in categories %}<a class="dark-blue-link" href="{{ site.url }}/categories/#{{category|slugize}}" rel="category tag">{{category}}</a>{% if forloop.last != true %},{% endif %} {% endfor %}</p>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-12 bg-white">
                       <!-- post excerpt -->
                       <div class="post-excerpt p-2" itemprop="articleBody">{{ post.excerpt }} ... <a href="{{site.url}}{{post.url}}">read more &raquo;</a></div>
+                      <span itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="hidden"><link class="hidden" itemprop="url" href="{{ site.url }}{{ site.thumbnails }}{{post.image}}" /></span>
                     </div>
                   </div>
                 </div>
@@ -34,17 +45,17 @@ pagination:
 {% endfor %}
 
     <!-- Pagination links -->
-    <nav class="mx-auto" aria-label="Blog pagination">
+    <nav class="mx-auto bg-white" aria-label="Blog pagination">
         <ul class="pagination  justify-content-center pagination-sm">
         {% if paginator.previous_page %}
             <li class="page-item">
-                <a class="page-link" href="{{ site.url }}{{ paginator.previous_page_path }}">Previous</a>
+                <a class="page-link bg-white" href="{{ site.url }}{{ paginator.previous_page_path }}">Previous</a>
             </li>
         {% endif %}
         {% if paginator.page_trail %}
             {% for trail in paginator.page_trail %}
             <li class="page-item">
-                <a class="page-link {% if trail.num == paginator.page %} bg-primary text-white{% endif %}" href="{{ site.url }}{{ trail.path }}">{{ trail.num }}</a>
+                <a class="page-link {% if trail.num == paginator.page %} active text-white{% else %} bg-white{% endif %}" href="{{ site.url }}{{ trail.path }}">{{ trail.num }}</a>
             </li>
             {% endfor %}
         {% endif %}
@@ -53,7 +64,7 @@ pagination:
             </li>
         {% if paginator.next_page %}
             <li class="page-item">
-                <a class="page-link" href="{{ site.url }}{{ paginator.next_page_path }}">Next</a>
+                <a class="page-link bg-white" href="{{ site.url }}{{ paginator.next_page_path }}">Next</a>
             </li>
         {% endif %}
         </ul>

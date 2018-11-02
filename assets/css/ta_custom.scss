@@ -410,3 +410,17 @@ span.notifyText {
 .featuredImage span.tag {
     text-shadow: 2px 2px 5px #000;
 }
+
+a, .pagination a.page-link, .dark-blue-link { color: #004A94; }
+.pagination a.active, .dark-blue-bg { background-color: #004A94; }
+
+.font0 { font-size: 0 !important ;}
+code.highlighter-rouge {
+    color: white;
+    background-color: black;
+    padding: 0.1em 0.3em 0.1em 0.3em;
+}
+
+.searchBar input.form-control {
+    width: 95% !important;
+}

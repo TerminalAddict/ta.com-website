@@ -160,7 +160,7 @@ Let's create an index.html file.
 > Note: include the [frontmatter](https://jekyllrb.com/docs/front-matter/){:target="_blank"}, the first 4 lines  
 > This tells Jekyll the layout to use (default.html) and gives the page a title (used in the above layout).  
 
-```
+
 {% highlight bash %}
 cat << EOF > index.html
 ---
@@ -198,6 +198,19 @@ EOF
 {% endhighlight %}
 
 We don't need the old file anymore so let's remove it `rm assets/css/main.scss`. 
+
+finally, in your index.html replace the css line with:
+
+{% highlight html %}
+{% raw %}
+{% capture styles %}
+    {% include main.css %}
+    {% endcapture %}
+    <style>
+    {{ styles | scssify }}
+    </style>
+{% endraw %}
+{% endhighlight %}
 
 We're done! Let's build and serve:  
 `jekyll build && jekyll serve --host=0.0.0.0`

@@ -29,16 +29,19 @@
       </blockquote>
         <fieldset class="p-2">
           <label for="comment-form-message"><small>(<a target="_blank" href="https://daringfireball.net/projects/markdown/">Markdown</a> is supported)</small></label>
-          <textarea class="w-100 rounded p-2" required rows="3" id="comment-form-message" name="fields[message]" tabindex="1" placeholder="* My comment is ..."></textarea>
+          <textarea class="w-100 rounded p-2" required rows="3" id="comment-form-message" name="fields[message]" placeholder="* My comment is ..."></textarea>
         </fieldset>
         <fieldset class="p-2">
-          <input class="w-100 rounded p-2" required type="text" id="comment-form-name" name="fields[name]" tabindex="2" placeholder="* My name is ..." />
+          <label for="comment-form-name" class="font0"><small>My name is</small></label>
+          <input class="w-100 rounded p-2" required type="text" id="comment-form-name" name="fields[name]" placeholder="* My name is ..." />
         </fieldset>
         <fieldset class="p-2">
-          <input class="w-100 rounded p-2" required type="email" id="comment-form-email" name="fields[email]" tabindex="3" placeholder="* My email is ..." />
+          <label for="comment-form-email" class="font0"><small>My email is</small></label>
+          <input class="w-100 rounded p-2" required type="email" id="comment-form-email" name="fields[email]" placeholder="* My email is ..." />
         </fieldset>
         <fieldset class="p-2">
-          <input class="w-100 rounded p-2" type="url" id="comment-form-url" name="fields[url]" tabindex="4" placeholder="My website is ... (optional)"/>
+          <label for="comment-form-url" class="font0"><small>My website is</small></label>
+          <input class="w-100 rounded p-2" type="url" id="comment-form-url" name="fields[url]" placeholder="My website is ... (optional)"/>
         </fieldset>
         <fieldset class="hidden">
             <p class="onoff">
@@ -59,7 +62,7 @@
         </p>
         <!-- End comment form alert messaging -->
         <fieldset>
-          <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn-primary">Submit Comment</button>
+          <button type="submit" id="comment-form-submit" class="btn btn-primary dark-blue-bg">Submit Comment</button>
         </fieldset>
       </form>
     <!-- End new comment form -->

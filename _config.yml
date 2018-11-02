@@ -4,7 +4,6 @@ plugins:
     - jekyll-paginate-v2
     - jekyll-feed
     - jekyll-archives
-    - jekyll-seo-tag
 site_name: "Linux and SysAdmin tips and tricks"
 description: "Linux and SysAdmin tips and tricks"
 thumbnails: "/assets/images/posts/thumbnails/"
@@ -70,11 +69,12 @@ jekyll-archives:
     day: '/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/category/:name/'
-jekyll-seo-tag:
+seo:
     defaults:
         - scope:
             path: ""
             values:
-                image: "/assets/images/ta-bearded.png"
-    image:
-        path: "/assets/images/posts"
+                image: "/assets/images/ta-bearded_optimised.png"
+                logo: "/assets/images/paul.jpg"
+offline:
+    strategy: cache-then-network

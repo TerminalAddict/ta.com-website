@@ -1,5 +1,6 @@
 {
- "name": "App",
+ "short_name": "TrmnlAddct",
+ "name": "TerminalAddict.com tip and tricks",
  "icons": [
   {
    "src": "\/assets\/favicon\/android-icon-36x36.png",
@@ -36,6 +37,16 @@
    "sizes": "192x192",
    "type": "image\/png",
    "density": "4.0"
+  },
+  {
+   "src": "\/assets\/favicon\/android-icon-512x512.png",
+   "sizes": "512x512",
+   "type": "image\/png"
   }
- ]
+ ],
+ "start_url": "/index.html",
+ "background_color": "#ffffff",
+ "display": "standalone",
+ "scope": "/",
+ "theme_color": "#ffffff"
 }
