@@ -127,7 +127,7 @@ span.tag {
 }
 
 .searchBar {
-  padding-top: 4rem !important;
+  top: 4rem !important;
   overflow-y: scroll;
 }
 
@@ -239,7 +239,7 @@ padding: 1.5rem !important;
 white-space: pre-wrap !important;
 max-height: 400px !important; 
 overflow-y: scroll !important;
-background-color: #f9f9f9;
+color: #f8f8f2;
 }
 .single_post h2 {
     border-bottom: 1px solid #aaa;
@@ -419,8 +419,17 @@ code.highlighter-rouge {
     color: white;
     background-color: black;
     padding: 0.1em 0.3em 0.1em 0.3em;
+    border-radius: 0.25em;
+}
+
+.highlight {
+    border-radius: 0.5em;
 }
 
 .searchBar input.form-control {
-    width: 95% !important;
+}
+input#query {
+    background-image: url('/assets/images/search.svg');
+    background-repeat: no-repeat;
+    padding-left: 50px;
 }

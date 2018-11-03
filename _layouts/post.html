@@ -43,9 +43,12 @@
 
   </head>
   <body class="single_post">
-    <div class="container-fluid w-100 terminalBG">
-      <div class="terminalcontainer p-1">
-        <div class="terminal">
+    <div class="container-fluid w-100 terminalBG ">
+      <div class="terminalcontainer p-1 d-flex flex-row align-items-center w-100">
+        <a class="ta_logo d-flex" href="/" data-toggle="tooltip" title="Linux and SysAdmin tips and tricks">
+            <img alt="Paul Willard" class="" src="http://localhost:4000/assets/images/TerminalAddict-50x50.png" />
+        </a>
+        <div class="terminal d-flex">
           <h1>@terminaladdict.com</h1>
         </div>
       </div>
@@ -54,9 +57,6 @@
     <div class="searchBar container-fluid fixed-top p-3 topbar">
       <div class="container">
         <div class="terminalBG d-flex flex-row rounded border p-2 align-items-center">
-          <a class="ta_logo d-flex" href="/" data-toggle="tooltip" title="Linux and SysAdmin tips and tricks">
-              <img alt="Paul Willard" class="d-flex align-top" src="{{ site.url }}/assets/images/TerminalAddict-50x50.png" />
-          </a>
           <input type="text" name="query" id="query" placeholder="Search this website ..." class="form-control d-flex" />
           <label for="query" class="font0"><small>Search</small></label>
         </div>
