@@ -3,6 +3,7 @@ comments: true
 title: Google Plus one (+1) on WordPress Theme
 categories:
   - php
+icon: php.svg
 ---
 Here's one for the web developers of the world. Google plus one went live today, so I chucked together a couple of simple functions, to include in your WordPress functions.php theme file.
 

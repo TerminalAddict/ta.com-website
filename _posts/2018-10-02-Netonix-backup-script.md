@@ -3,6 +3,7 @@ layout: post
 author: paul
 comments: true
 categories: [bash, linux]
+icon: bash.svg
 ---
 Working for a [WISP](https://en.wikipedia.org/wiki/Wireless_Internet_service_provider){:target="_blank"} I entensively use [Netonix](https://www.netonix.com/){:target="_blank"} switches. I was asked to code a backup script with parameters in BASH.
 

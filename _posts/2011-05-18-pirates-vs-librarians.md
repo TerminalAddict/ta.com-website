@@ -3,6 +3,7 @@ comments: true
 title: Pirates vs Librarians
 categories:
   - Networking
+icon: sysadmin.svg
 ---
 Yep it's the important issues I consider !!!
 

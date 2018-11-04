@@ -3,6 +3,7 @@ comments: true
 title: The shortest straw (or URL?)
 categories:
   - Linux
+icon: linux.svg
 ---
 So todays project was shorten my URLs :)
 

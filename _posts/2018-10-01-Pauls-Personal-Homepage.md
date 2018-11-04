@@ -3,6 +3,7 @@ layout: post
 author: paul
 comments: true
 categories: [php, css]
+icon: css.svg
 ---
 After Google Homepage closed down I wrote my own rss aggregator using php and cron.
 

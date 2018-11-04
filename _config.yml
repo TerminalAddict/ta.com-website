@@ -7,6 +7,7 @@ plugins:
 site_name: "Linux and SysAdmin tips and tricks"
 description: "Linux and SysAdmin tips and tricks"
 thumbnails: "/assets/images/posts/thumbnails/"
+icons: "/assets/images/icons/"
 post-images: "/assets/images/posts/"
 timezone: Pacific/Auckland
 incremental: false
@@ -32,6 +33,7 @@ defaults:
       comments: "true"
       author: "paul"
       image: "no-image.png"
+      icon: "sysadmin.svg"
   - scope:
       path: ""
     values:

@@ -3,6 +3,7 @@ layout: post
 author: paul
 comments: true
 categories: [linux, bash]
+icon: bash.svg
 ---
 In 2018 I changed from running iptables to running nftables. This is my BASH script I use on my firewall.
 

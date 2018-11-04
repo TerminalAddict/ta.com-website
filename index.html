@@ -19,7 +19,7 @@ pagination:
                   <div class="row p-3 w-100">
                     <div class="col-md-12 bg-white">
                       <!-- post meta -->
-                      <h2 class="entry-title"><a itemprop="url mainEntityOfPage" href="{{site.url}}{{post.url}}"><span itemprop="headline">{{post.title}}</span></a></h2>
+                      <h2 class="entry-title"><a itemprop="url mainEntityOfPage" href="{{site.url}}{{post.url}}"><img src="{{ site.url }}{{ site.icons }}{{ post.icon }}" alt="{{ post.icon }}" /><span itemprop="headline">{{post.title}}</span></a></h2>
                       <div class="post-meta">by 
                         <div class="d-inline author vcard" itemprop="author">
                           {% if author %}<a href="{{ site.url }}{{ author.url }}" title="Posts by {{ author.name }}" rel="author">

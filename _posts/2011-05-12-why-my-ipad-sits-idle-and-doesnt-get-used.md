@@ -3,6 +3,7 @@ comments: true
 title: "Why my iPad sits idle, and doesn't get used"
 categories:
   - osx
+icon: apple.svg
 ---
 Well it seems maybe the honeymoon is over?
 

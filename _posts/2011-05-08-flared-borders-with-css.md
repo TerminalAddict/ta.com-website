@@ -3,6 +3,7 @@ comments: true
 title: Flared Borders with CSS
 categories:
   - css
+icon: css.svg
 ---
 ## I want a Pure CSS menu with nice rounded corners
 

@@ -38,7 +38,7 @@ $(document).ready(function(){
         $('#queryResult').html('');
         searchField = $('#query').val();
         expression = new RegExp(searchField, "i");
-        $.getJSON('assets/search.json', function(data) {
+        $.getJSON('/assets/search.json', function(data) {
             $.each(data, function(key, value){
                 if (value.url.search(expression) != -1 || value.content.search(expression) != -1 || value.title.search(expression) != -1) {
                     var n = value.content.search(expression)-50;
@@ -64,6 +64,10 @@ $(document).ready(function(){
     $('a[target="_blank"').each(function() {
         $(this).attr('rel', 'noreferrer noopener');
     })
+    var notFoundLink = $(location).attr('href');
+    var newFoundLink = notFoundLink.replace('terminaladdict.com','loudas.com');
+    $(".notfoundLink").html(newFoundLink);
+    $(".notfoundLink").attr('href',newFoundLink);
 });
 
 $(".ta_logo").mouseover(function(){

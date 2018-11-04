@@ -4,6 +4,7 @@ title: 'TerminalAddict version 2 ( HTML5 & CSS3 )'
 date: 2011-05-05T16:57:56+00:00
 categories:
   - css
+icon: css.svg
 ---
 ## is this HTML5 and CSS3 I see before me?
 

@@ -3,6 +3,7 @@ layout: post
 author: paul
 comments: true
 categories: [linux, bash, mikrotik]
+icon: debian.svg
 ---
 I pretty frequently install debian. There is always some sort of development going on that needs me to fire up a new install.  
 I wrote a script to update my Debian Netboot directory etc.

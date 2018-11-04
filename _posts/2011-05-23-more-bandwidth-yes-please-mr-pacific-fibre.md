@@ -3,6 +3,7 @@ comments: true
 title: more bandwidth? yes please Mr Pacific Fibre
 categories:
   - Networking
+icon: sysadmin.svg
 ---
 It seems the international community is starting to notice some things in the NZ internet space. This recent story on [El reg](http://www.theregister.co.uk){: target="_blank"} & [Nz boffins anchor new submarine cable](http://www.theregister.co.uk/2011/05/22/pacific_fibre_submarine_cable/){: target="_blank"}
 

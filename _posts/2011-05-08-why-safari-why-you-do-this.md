@@ -3,6 +3,7 @@ comments: true
 title: Why Safari? Why you do this?
 categories:
   - osx
+icon: apple.svg
 ---
 ## Or why Safari on my iPad thinks it best to undo all my work!
 

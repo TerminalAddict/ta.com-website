@@ -3,6 +3,7 @@ layout: post
 author: paul
 comments: true
 categories: [linux, bash]
+icon: bash.svg
 ---
 I have an APC UPS which I like to monitor, and graph, this is the code I use to do so.
 

@@ -3,6 +3,7 @@ layout: post
 author: paul
 comments: true
 categories: [linux, bash, osx]
+icon: apple.svg
 ---
 In 2018 I got a flashy new MacBook Pro. Using the macOS integrated backup solution Time Machine I wanted to build an open source Apple Time Capsule.  
 Apple Mac OSX doesn't allow you to use a network share as a backup location.  

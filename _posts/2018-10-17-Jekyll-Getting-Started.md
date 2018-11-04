@@ -3,6 +3,7 @@ layout: post
 author: paul
 comments: true
 categories: [linux, jekyll, bash, development]
+icon: jekyll.svg
 ---
 So my web development has taken an interesting path, not that different to some others.  
 I start back in 1907 doing hand coded html, then moved to hand coded php, then dreamweaver, then CMS.  

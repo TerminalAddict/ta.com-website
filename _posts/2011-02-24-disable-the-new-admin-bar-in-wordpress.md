@@ -3,6 +3,7 @@ comments: true
 title: Disable the new admin bar in wordpress
 categories:
   - php
+icon: php.svg
 ---
 Yep a geeky thing .. today word press updated to version 3.1
 

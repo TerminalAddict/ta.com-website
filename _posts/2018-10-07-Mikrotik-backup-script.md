@@ -3,6 +3,7 @@ layout: post
 author: paul
 comments: true
 categories: [linux, bash, mikrotik]
+icon: sysadmin.svg
 ---
 I use [Mikrotik](https://www.mikrotik.com/){:target="_blank"} routers a lot! I work for a [WISP](https://en.wikipedia.org/wiki/Wireless_Internet_service_provider){:target="_blank"} and there are a lot of Mikrotik devices.
 
