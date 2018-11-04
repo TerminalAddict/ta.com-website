@@ -63,6 +63,7 @@ staticman:
 jekyll-archives:
   enabled: all
   layout: archive
+  title: Archives
   permalinks:
     year: '/:year/'
     month: '/:year/:month/'

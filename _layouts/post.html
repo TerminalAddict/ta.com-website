@@ -95,20 +95,21 @@
 
 			  {% assign author = site.authors | where: 'short_name', page.author | first %}
 			  {% if author %}
-              <footer class="blockquote-footer p-0 m-0">by 
-                  <span class="author vcard" itemprop="author">
+              <footer class="blockquote-footer p-0 m-0"><span>by </span>
+                  <div class="author vcard d-inline" itemprop="author">
                       <a href="{{ site.url }}{{ author.url }}" class="text-dark" rel="author">
-                          <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                          <div class="d-inline" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                              <span itemprop="name" class="font-weight-bold">{{ author.name }}</span>
-                             <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject" class="hidden">
+                             <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject" class="hidden">
                                <link itemprop="url" href="{{ site.url }}{{author.pic}}" />
-                             </span>
-                           </span>
+                             </div>
+                          </div>
                       </a>
-                  </span>
+                  </div>
               </footer>
 			  {% endif %}
 				</blockquote>
+			</div>
 			</div>
             <div class="single_post_content pt-3">
 

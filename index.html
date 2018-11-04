@@ -20,22 +20,23 @@ pagination:
                     <div class="col-md-12 bg-white">
                       <!-- post meta -->
                       <h2 class="entry-title"><a itemprop="url mainEntityOfPage" href="{{site.url}}{{post.url}}"><span itemprop="headline">{{post.title}}</span></a></h2>
-                      <p class="post-meta">by 
-                      <span class="author vcard" itemprop="author">
+                      <div class="post-meta">by 
+                        <div class="d-inline author vcard" itemprop="author">
                           {% if author %}<a href="{{ site.url }}{{ author.url }}" title="Posts by {{ author.name }}" rel="author">
-                            <span itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+                            <div class="d-inline" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
                                 <span itemprop="name" class="bg-white dark-blue-link">{{ author.name }}</span>
-                                <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject" class="hidden">
+                                <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject" class="hidden">
                                     <link itemprop="url" href="{{ site.url }}{{author.pic}}" />
-                                </span>
-                            </span>
+                                </div>
+                            </div>
                           </a>{% endif %}
-                      </span>  |  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ post.date | date_to_string }}</time>  |  {% for category in categories %}<a class="dark-blue-link" href="{{ site.url }}/categories/#{{category|slugize}}" rel="category tag">{{category}}</a>{% if forloop.last != true %},{% endif %} {% endfor %}</p>
+                      </div>  |  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ post.date | date_to_string }}</time>  |  {% for category in categories %}<a class="dark-blue-link" href="{{ site.url }}/categories/#{{category|slugize}}" rel="category tag">{{category}}</a>{% if forloop.last != true %},{% endif %} {% endfor %}
+                    </div>
                     </div>
                     <div class="col-md-12 bg-white">
                       <!-- post excerpt -->
                       <div class="post-excerpt p-2" itemprop="articleBody">{{ post.excerpt }} ... <a href="{{site.url}}{{post.url}}">read more &raquo;</a></div>
-                      <span itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="hidden"><link class="hidden" itemprop="url" href="{{ site.url }}{{ site.thumbnails }}{{post.image}}" /></span>
+                      <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="hidden"><link class="hidden" itemprop="url" href="{{ site.url }}{{ site.thumbnails }}{{post.image}}" /></div>
                     </div>
                   </div>
                 </div>
