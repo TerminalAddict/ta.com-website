@@ -5,6 +5,7 @@
         <div class="row">
           <div class="col-md-12 bg-white p-3 border rounded" id="pwnzContainer">
             <div class="col-md-12" id="{{ site.url }}{{ page.url }}" itemscope itemtype="http://schema.org/Article">
+            <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="hidden"><link class="hidden" itemprop="url" href="{{ site.url }}{{ site.post-images }}{{page.image}}" /></div>
 			<div class="row w-100">
                 <a class="text-dark d-flex flew-row align-items-center" itemprop="url mainEntityOfPage" href="{{site.url}}{{page.url}}"><img class="posticon" src="{{ site.url }}{{ site.icons }}{{ page.icon }}" alt="{{ post.icon }}" /><h1 itemprop="headline">{{page.title}}</h1></a>
 			</div>
