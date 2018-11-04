@@ -68,6 +68,17 @@ $(document).ready(function(){
     var newFoundLink = notFoundLink.replace('terminaladdict.com','loudas.com');
     $(".notfoundLink").html(newFoundLink);
     $(".notfoundLink").attr('href',newFoundLink);
+
+    // register a service worker for offline content
+    if ("serviceWorker" in navigator) {
+         navigator.serviceWorker.register('/service_worker.js').then(function() {
+             // console.log('CLIENT: service worker registration complete.');
+            }, function () {
+             console.log('CLIENT: service worker registration failure.');
+            });
+    } else {
+        console.log('CLIENT: service worker is not supported.');
+    }
 });
 
 $(".ta_logo").mouseover(function(){
