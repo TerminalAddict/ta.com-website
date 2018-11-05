@@ -32,7 +32,7 @@ Well, I'm not sure. People need to trust a website, trust that it's OK, that the
 
 Then, the whole world needs to shift their ideas of how to interact with other people online.
 
-Facebook is dying, like actually .. less and less people use it. They're sick of the advertising, the "share this if you agree" bollocks, the whole thing has just turned into a mess. Photo sharing like instagram has got big (instagram is opwned by facebook, so they're probably selling your details like they always have) but it no good for text blogging; Should we go back to the old fashioned days of visiting people. :)
+Facebook is dying, like actually .. less and less people use it. They're sick of the advertising, the "share this if you agree" bollocks, the whole thing has just turned into a mess. Photo sharing like instagram has got big (instagram is owned by facebook, so they're probably selling your details like they always have) but it no good for text blogging; Should we go back to the old fashioned days of visiting people. :)
 
 ### Call in for a cuppa
 Back in the bad old days, you used to call in to see your friends, share a cup of coffee, catch up, then do it all again in two weeks.
