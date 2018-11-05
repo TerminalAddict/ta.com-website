@@ -12,7 +12,7 @@ Developers ( like me ) try _really_ _really_ hard to make it easy for people to 
 
 Look here for an example, it's simple, there is no sign up, no "confirm your email address", simple! Just fill out a form and click submit.
 
-There's no magic in the background either. As of writing this (2018) there are no cookies used on this site, no data collection, no database in the background where I send info to advertisers, **nothing**. and yet, it's so difficult to get people to comment on our own websites?[^1]
+[^1]There's no magic in the background either. As of writing this (2018) there are no cookies used on this site, no data collection, no database in the background where I send info to advertisers, **nothing**. and yet, it's so difficult to get people to comment on our own websites?
 
 The media landscape kinda forces us, as website owners, to share our pages on facebook, twitter, instagram, whatever ... and they (the social media websites) really have captured the "comments" market.
 
