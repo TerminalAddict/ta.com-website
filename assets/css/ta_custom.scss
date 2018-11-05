@@ -114,23 +114,38 @@ span.tag {
 }
 
 .fadeOut {
-	opacity: 0;
+	/* opacity: 0; */
 	transition: opacity .25s ease-in-out;
    -moz-transition: opacity .25s ease-in-out;
    -webkit-transition: opacity .25s ease-in-out;
-   pointer-events: none;
+   transform: translate3d(-280px, 0, 0);
+   transition: 0.3s all ease;
+   -moz-transition: 0.3s all ease;
+   -webkit-transition: 0.3s all ease;
+   overflow-y: auto !important;
+   width: 350px
+}
+
+.fadeOut input{
+    cursor: pointer;
 }
 
 .fadeIn {
 	opacity: 1;
-	transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;
+	transition: all .25s ease-in-out;
+   -moz-transition: all .25s ease-in-out;
+   -webkit-transition: all .25s ease-in-out;
 }
 
 .searchBar {
   top: 4rem !important;
   overflow-y: scroll;
+  left: 0;
+  right: auto;
+}
+
+.searchBar .terminalBG {
+    width: 300px;
 }
 
 #fluidcontainer {
@@ -433,7 +448,8 @@ code.highlighter-rouge {
 input#query {
     background-image: url('/assets/images/search.svg');
     background-repeat: no-repeat;
-    padding-left: 50px;
+    padding-right: 50px;
+    background-position: right;
 }
 a.ta_logo:hover {
     text-decoration: none;

@@ -12,10 +12,13 @@ $(document).ready(function(){
                 if(searchResult=true) {
                     $('.searchBar').addClass('fadeOut');
                     $('.searchBar').removeClass('fadeIn');
+                    $('.fadeOut input').click(function() { $('.searchBar').removeClass('fadeOut'); $('.searchBar').addClass('fadeIn'); });
                 }
             } else {
-                $('.searchBar').addClass('fadeIn');
-                $('.searchBar').removeClass('fadeOut');
+                if($(this).scrollTop() < 50) {
+                    $('.searchBar').addClass('fadeIn');
+                    $('.searchBar').removeClass('fadeOut');
+                }
             }
             lastScrollTop = st;
         });
@@ -34,7 +37,7 @@ $(document).ready(function(){
      $.ajaxSetup({ cache: false });
      $('#query').keyup(function(){
         $('.searchResults').removeClass('hidden');
-        $('.searchBar').css('height', '100%');
+        $('.searchBar').css('height', '80%');
         $('#queryResult').html('');
         searchField = $('#query').val();
         expression = new RegExp(searchField, "i");
@@ -63,9 +66,9 @@ $(document).ready(function(){
      }); 
     $('a[target="_blank"').each(function() {
         $(this).attr('rel', 'noreferrer noopener');
-    })
+    });
     var notFoundLink = $(location).attr('href');
-    var newFoundLink = notFoundLink.replace('terminaladdict.com','loudas.com');
+    var newFoundLink = notFoundLink.replace('terminaladdict.com','www.loudas.com');
     $(".notfoundLink").html(newFoundLink);
     $(".notfoundLink").attr('href',newFoundLink);
 
@@ -79,6 +82,10 @@ $(document).ready(function(){
     } else {
         console.log('CLIENT: service worker is not supported.');
     }
+    $('.fadeOut input').click(function() {
+        $('.searchBar').removeClass('fadeOut');
+        $('.searchBar').addClass('fadeIn');
+    });
 });
 
 $(".ta_logo").mouseover(function(){
@@ -92,6 +99,7 @@ $('a[data-mail]').on('click', function() {
 $('.searchResults .close').on('click', function(){
     $('.searchResults').addClass('hidden');
     $('.searchBar').css('height', 'auto');
+    $('.searchBar').addClass('fadeOut');
     $('#query').val('');
 })
 
