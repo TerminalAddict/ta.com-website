@@ -39,6 +39,13 @@ $(document).ready(function(){
         $('.searchResults').removeClass('hidden');
         $('.searchBar').css('height', '80%');
         $('#queryResult').html('');
+
+        if($(this).scrollTop() < 50) {
+          $('#overlay').addClass('overlayon');
+          $('.searchBar').addClass('fadeIn');
+          $('.searchBar').removeClass('fadeOut');
+        }
+
         searchField = $('#query').val();
         expression = new RegExp(searchField, "i");
         $.getJSON('/assets/search.json', function(data) {
