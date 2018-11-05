@@ -7,6 +7,10 @@ var urlsToCache = [];
   urlsToCache.push("{{ post.url }}");
 {% endfor %}
 
+// force the cache of bundle.js
+urlsToCache.push('/assets/js/bundle.js');
+
+
 var CACHE_NAME = '{{ site.site_name | slugify }}-cache-v1';
 
 self.addEventListener('install', function(event) {

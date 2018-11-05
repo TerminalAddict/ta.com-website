@@ -96,6 +96,7 @@ $('.searchResults .close').on('click', function(){
     $('.searchResults').addClass('hidden');
     $('.searchBar').css('height', 'auto');
     $('.searchBar').addClass('fadeOut');
+    $('.searchBar').removeClass('fadeIn');
     $('#overlay').removeClass('overlayon');
     $('#query').val('');
 })
@@ -114,11 +115,23 @@ $('#overlay').click(function() {
     $('#query').val('');
 });
 
-$('.fadeOut input').click(function() {
+
+$('.fadeOut').on('click', 'input', function(event){
+    event.preventDefault();
     $('.nooverlay').addClass('overlayon');
     $('.searchBar').addClass('fadeIn');
     $('.searchBar').removeClass('fadeOut');
 });
+
+$('#query').blur(function(){
+	$(".searchResults").addClass("hidden");
+    $(".searchBar").css("height", "auto");
+    $(".searchBar").addClass("fadeOut");
+    $(".searchBar").removeClass("fadeIn");
+    $("#overlay").removeClass("overlayon");
+    $("#query").val("")
+});
+
 (function ($) {
     var $comments = $('.js-comments');
 
