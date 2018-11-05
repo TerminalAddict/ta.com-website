@@ -10,6 +10,12 @@ var urlsToCache = [];
 // force the cache of bundle.js
 urlsToCache.push('/assets/js/bundle.js');
 
+{% for page in site.pages %}
+  {% if page.url %}
+    urlsToCache.push("{{ page.url }}");
+  {% endif %}
+{% endfor %}
+
 
 var CACHE_NAME = '{{ site.site_name | slugify }}-cache-{{ "now" | date: "%d-%m-%Y_%H:%M" }}';
 
