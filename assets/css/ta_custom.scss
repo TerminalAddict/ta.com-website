@@ -519,3 +519,14 @@ a.ta_logo:hover {
     bottom: -13px;
     left: 26px;
 }
+
+.footnotes:before {
+    content: "Footnotes";
+    font-style: italic;
+}
+.footnotes {
+    width: 100%;
+    border: 1px #ccc solid;
+    background-color: rgba(248,248,255, 1);
+    padding: 0.25em;
+}
