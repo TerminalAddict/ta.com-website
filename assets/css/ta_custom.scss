@@ -489,3 +489,33 @@ a.ta_logo:hover {
 	background: rgba(0,255,0,0.5) !important;
 	border: 5px dashed #538756 !important;
 }
+
+.single_post h2 {
+    border-bottom: 1px solid #aaa;
+    margin: 15px 0;
+    padding: 5px 0;
+    position: relative;
+    color: #343434;
+    font-weight: normal;
+    font-family: sans-serif;
+}
+@media (max-width: 576px) {
+    .single_post h2 { font-size: 20px !important; }
+}
+
+.single_post h2:before,
+.single_post h2:after {
+    content: '';
+    border-right: 20px solid #fff;
+    border-top: 15px solid #aaa;
+    bottom: -15px;
+    position: absolute;
+    left: 25px;
+}
+
+.single_post h2:after {
+    border-top-color: #fff;
+    border-right-color: transparent;
+    bottom: -13px;
+    left: 26px;
+}
