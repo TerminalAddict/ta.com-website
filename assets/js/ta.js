@@ -82,10 +82,6 @@ $(document).ready(function(){
     } else {
         console.log('CLIENT: service worker is not supported.');
     }
-    $('.fadeOut input').click(function() {
-        $('.searchBar').removeClass('fadeOut');
-        $('.searchBar').addClass('fadeIn');
-    });
 });
 
 $(".ta_logo").mouseover(function(){
@@ -100,6 +96,7 @@ $('.searchResults .close').on('click', function(){
     $('.searchResults').addClass('hidden');
     $('.searchBar').css('height', 'auto');
     $('.searchBar').addClass('fadeOut');
+    $('#overlay').removeClass('overlayon');
     $('#query').val('');
 })
 
@@ -109,8 +106,19 @@ $('img[rel="lightbox"]').on('click', function() {
     $('#lightboxModal').modal('show');
 });
 
+$('#overlay').click(function() {
+    $('.searchResults').addClass('hidden');
+    $('.searchBar').css('height', 'auto');
+    $('.searchBar').addClass('fadeOut');
+    $('#overlay').removeClass('overlayon');
+    $('#query').val('');
+});
 
-// Static comments
+$('.fadeOut input').click(function() {
+    $('.nooverlay').addClass('overlayon');
+    $('.searchBar').addClass('fadeIn');
+    $('.searchBar').removeClass('fadeOut');
+});
 (function ($) {
     var $comments = $('.js-comments');
 

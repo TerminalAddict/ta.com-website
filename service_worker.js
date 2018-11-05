@@ -7,12 +7,6 @@ var urlsToCache = [];
   urlsToCache.push("{{ post.url }}");
 {% endfor %}
 
-{% for page in site.pages %}
-  {% if page.url %}
-    urlsToCache.push("{{ page.url }}");
-  {% endif %}
-{% endfor %}
-
 var CACHE_NAME = '{{ site.site_name | slugify }}-cache-v1';
 
 self.addEventListener('install', function(event) {

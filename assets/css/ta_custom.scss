@@ -459,3 +459,20 @@ a.ta_logo:hover {
     width: 50px;
     height: 50px;
 }
+
+.overlayon {
+    background: rgba(0,0,0,0.8) !important;
+	height: 180vh !important;
+	width: 100% !important;
+    transition: 0.25s ease all;
+}
+.nooverlay {
+    background: transparent;
+	height: 0;
+	width: 0;
+	position: fixed;
+	z-index: 95;
+	top: -4rem;
+	overflow: hidden;
+    transition: 0.25s ease all;
+}
