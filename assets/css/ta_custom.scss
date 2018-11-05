@@ -476,3 +476,16 @@ a.ta_logo:hover {
 	overflow: hidden;
     transition: 0.25s ease all;
 }
+
+.thankbox {
+	@extend .col-md-8;
+	@extend .mx-auto;
+	@extend .bg-success;
+	@extend .border;
+	@extend .rounded;
+	@extend .text-dark;
+	@extend .p-2;
+	@extend .mb-2;
+	background: rgba(0,255,0,0.5) !important;
+	border: 5px dashed #538756 !important;
+}
