@@ -123,14 +123,6 @@ $('.fadeOut').on('click', 'input', function(event){
     $('.searchBar').removeClass('fadeOut');
 });
 
-$('#query').blur(function(){
-	$(".searchResults").addClass("hidden");
-    $(".searchBar").css("height", "auto");
-    $(".searchBar").addClass("fadeOut");
-    $(".searchBar").removeClass("fadeIn");
-    $("#overlay").removeClass("overlayon");
-    $("#query").val("")
-});
 
 (function ($) {
     var $comments = $('.js-comments');
