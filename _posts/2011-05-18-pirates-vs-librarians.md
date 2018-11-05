@@ -7,7 +7,7 @@ icon: sysadmin.svg
 ---
 Yep it's the important issues I consider !!!
 
-{% include thumbnail.html img="priates.jpg" %}{% include thumbnail.html img="librarians.jpg" %}
+{% include thumbnail.html img="pirates.jpg" %}{% include thumbnail.html img="librarians.jpg" %}
 
 Actually this is a somewhat important topic in New Zealand really; the laws surrounding anti-piracy and what-not in NZ. Today the [NZ Herald](http://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&objectid=10726286&ref=facebookheadlines){: target="_blank"} published a story about libraries having to possibly remove all internet access.
 
