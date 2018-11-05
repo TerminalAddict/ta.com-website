@@ -80,4 +80,4 @@ seo:
                 image: "/assets/images/ta-bearded_optimised.png"
                 logo: "/assets/images/paul.jpg"
 offline:
-    strategy: cache-then-network
+    strategy: network-first-cache-fallback
