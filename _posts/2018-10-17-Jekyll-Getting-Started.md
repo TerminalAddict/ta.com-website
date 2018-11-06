@@ -148,7 +148,6 @@ Now let's put some text in the file:
 ---
 ---
 
-@import "variables";
 @import "bootstrap/scss/bootstrap";
 
 EOF 
