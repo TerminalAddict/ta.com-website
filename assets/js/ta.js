@@ -81,7 +81,8 @@ $(document).ready(function(){
 
     // register a service worker for offline content
     if ("serviceWorker" in navigator) {
-         navigator.serviceWorker.register('/service_worker.js').then(function() {
+         // navigator.serviceWorker.register('/service_worker.js').then(function() {
+         navigator.serviceWorker.register('/sw.js').then(function() {
              // console.log('CLIENT: service worker registration complete.');
             }, function () {
              console.log('CLIENT: service worker registration failure.');

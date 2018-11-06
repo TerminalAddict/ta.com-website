@@ -3,7 +3,7 @@ comments: true
 title: Install a ram drive in Windows 7
 categories:
   - development
-icon: sysadmin.svg
+icon: systems.svg
 ---
 ### or How to move the Firefox or Chrome cache to a RAM disk and speed up surfing by 20% or more
 
