@@ -17,10 +17,12 @@ urlsToCache.push('/assets/js/bundle.js');
 {% endfor %}
 
 
-var CACHE_NAME = '{{ site.site_name | slugify }}-cache-{{ "now" | date: "%d-%m-%Y_%H:%M" }}';
+// var CACHE_NAME = '{{ site.site_name | slugify }}-cache-{{ "now" | date: "%d-%m-%Y_%H:%M" }}';
+var CACHE_NAME = '{{ site.site_name | slugify }}-cache-v1';
 
 self.addEventListener('install', function(event) {
   // Perform install steps
+  self.skipWaiting();
   event.waitUntil(caches.open(CACHE_NAME).then(function(cache) {
     return cache.addAll(urlsToCache);
   }).catch(function(err) {
@@ -40,6 +42,7 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
+
 
 // strategies from the offline cookbook by jake archibald
 // https://jakearchibald.com/2014/offline-cookbook/#serving-suggestions-responding-to-requests
@@ -109,3 +112,4 @@ self.addEventListener('fetch', function(event) {
     );
   });
 {% endif %}
+
