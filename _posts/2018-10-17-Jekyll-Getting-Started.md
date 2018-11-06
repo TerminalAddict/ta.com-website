@@ -120,7 +120,7 @@ cat << EOF > _layouts/default.html
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title id="pageTitle">Jekyll Getting Started</title>
-	<link rel="stylesheet" href="//assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/main.css">
 	</head>
 
 	<body>
