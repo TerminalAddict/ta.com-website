@@ -17,8 +17,8 @@ urlsToCache.push('/assets/js/bundle.js');
 {% endfor %}
 
 
-// var CACHE_NAME = '{{ site.site_name | slugify }}-cache-{{ "now" | date: "%d-%m-%Y_%H:%M" }}';
-var CACHE_NAME = '{{ site.site_name | slugify }}-cache-v1';
+var CACHE_NAME = '{{ site.site_name | slugify }}-cache-{{ "now" | date: "%d-%m-%Y_%H:%M" }}';
+// var CACHE_NAME = '{{ site.site_name | slugify }}-cache-v1';
 
 self.addEventListener('install', function(event) {
   // Perform install steps
