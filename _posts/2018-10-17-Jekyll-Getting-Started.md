@@ -346,3 +346,6 @@ case $1 in
 esac
 
 {% endhighlight %}
+
+## And here's the video
+{% include youtube.html id="96gESBDFzco" %}
