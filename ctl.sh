@@ -21,6 +21,7 @@ PingSearchEngine() {
     GOOGLEURL=$(printf "http://www.google.com/webmasters/tools/ping?sitemap=%s" "$FEED")
     BINGURL=$(printf "http://www.bing.com/webmaster/ping.aspx?siteMap=%s" "$FEED")
 
+    echo "Pinging ping-o-matic, Google, and Bing"
     curl --silent $PINGOURL > /dev/null
     curl --silent $GOOGLEURL > /dev/null
     curl --silent $BINGURL > /dev/null
@@ -85,6 +86,7 @@ PushLive () {
     fi
     rsync -avz --delete _site/* $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH
     # ssh $REMOTE_USER@$REMOTE_HOST "chown -R www-data:www-data $REMOTE_PATH"
+    echo "Updating search.json on server"
     ssh $REMOTE_USER@$REMOTE_HOST "php $REMOTE_PATH/assets/php/json.php > $REMOTE_PATH/assets/search.json"
     PingSearchEngine
 }
