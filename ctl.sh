@@ -8,7 +8,23 @@ REMOTE_HOST=webhost1.hosting.netent.co.nz
 REMOTE_PATH=/var/www/html/terminaladdict.com
 REMOTE_USER=paul
 
+# stuff required to ping search engines
+# requires node to be installed to work
+URL=`node --eval "console.log(encodeURIComponent('https://terminaladdict.com'))"`
+FEED=`node --eval "console.log(encodeURIComponent('https://terminaladdict.com/feed.xml'))"`
+BLOGNAME=TerminalAddict
+
 VERSION="2018-10-15 v1.0"
+
+PingSearchEngine() {
+    PINGOURL=$(printf "http://pingomatic.com/ping/?title=%s&blogurl=%s&rssurl=%s&chk_weblogscom=on&chk_blogs=on&chk_feedburner=on&chk_newsgator=on&chk_myyahoo=on&chk_pubsubcom=on&chk_blogdigger=on&chk_weblogalot=on&chk_newsisfree=on&chk_topicexchange=on&chk_google=on&chk_tailrank=on&chk_skygrid=on&chk_collecta=on&chk_superfeedr=on" "$BLOGNAME" "$URL" "$FEED")
+    GOOGLEURL=$(printf "http://www.google.com/webmasters/tools/ping?sitemap=%s" "$FEED")
+    BINGURL=$(printf "http://www.bing.com/webmaster/ping.aspx?siteMap=%s" "$FEED")
+
+    curl --silent $PINGOURL > /dev/null
+    curl --silent $GOOGLEURL > /dev/null
+    curl --silent $BINGURL > /dev/null
+}
 
 ShowHelp() {
     SCRIPT_NAME="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
@@ -70,6 +86,7 @@ PushLive () {
     rsync -avz --delete _site/* $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH
     # ssh $REMOTE_USER@$REMOTE_HOST "chown -R www-data:www-data $REMOTE_PATH"
     ssh $REMOTE_USER@$REMOTE_HOST "php $REMOTE_PATH/assets/php/json.php > $REMOTE_PATH/assets/search.json"
+    PingSearchEngine
 }
 
 case $1 in 
