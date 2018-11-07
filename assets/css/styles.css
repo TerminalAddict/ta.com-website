@@ -1,0 +1,7 @@
+---
+layout: null
+---
+{% capture styles %}
+  {% include main.css %}
+{% endcapture %}
+{{ styles | scssify }}
