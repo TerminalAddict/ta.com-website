@@ -80,9 +80,10 @@ $(document).ready(function(){
     $(".notfoundLink").attr('href',newFoundLink);
 
     // register a service worker for offline content
+    var now=Date.now();
     if ("serviceWorker" in navigator) {
          // navigator.serviceWorker.register('/service_worker.js').then(function() {
-         navigator.serviceWorker.register('/sw.js').then(function() {
+         navigator.serviceWorker.register('/sw.js?'+now).then(function() {
              // console.log('CLIENT: service worker registration complete.');
             }, function () {
              console.log('CLIENT: service worker registration failure.');

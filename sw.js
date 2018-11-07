@@ -19,20 +19,20 @@ workbox.precaching.precacheAndRoute([
 {% for post in site.posts %}
   {
     url: "{{ post.url }}",
-    revision: "{{ "now" | date: "%d-%m-%Y_%H:%M" }}"
+    revision: "{{ "now" | date: "%s" }}"
   },
 {% endfor %}
 {% for page in site.pages %}
   {% if page.url %}
   {
     url: "{{ page.url }}",
-    revision: "{{ "now" | date: "%d-%m-%Y_%H:%M" }}"
+    revision: "{{ "now" | date: "%s" }}"
   },
   {% endif %}
 {% endfor %}
   {
     url: "/assets/js/bundle.js",
-    revision: "{{ "now" | date: "%d-%m-%Y_%H:%M" }}"
+    revision: "{{ "now" | date: "%s" }}"
   }
 ]);
 
