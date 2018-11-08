@@ -134,6 +134,15 @@ $("#query").click(function(e){
   }
 });
 
+var verifyCaptcha = function(response) {
+    if(response.length == 0) {
+    } else {
+    	var _el=$('#comment-form-submit');
+        _el.removeAttr("disabled");
+        _el.addClass('button-primary dark-blue-bg');
+        _el.attr('aria-disabled', 'false');
+    }
+};
 
 (function ($) {
     var $comments = $('.js-comments');
