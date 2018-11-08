@@ -18,7 +18,7 @@
               <ul class="list-group categoriesList">
                 {% for category in site.categories %}
                 {% capture category_name %}{{ category | first }}{% endcapture %}
-                <li class="list-group-item py-1"><a href="{{ site.url }}/categories/#{{ category_name | slugize }}">{{ category_name | slugsize }}</a></li>
+                <li class="list-group-item"><a href="{{ site.url }}/categories/#{{ category_name | slugize }}">{{ category_name | slugsize }}</a></li>
                 {% endfor %}
               </ul>
             </aside>
@@ -30,24 +30,23 @@
 	<div class="card">
 	  	<div class="card-header pl-0 pr-0" id="y{{ year.name }}">
 	      <h5 class="mb-0">
-	        <button class="btn btn-link w-100" data-toggle="collapse" data-target="#m{{ year.name }}" aria-expanded="false" aria-controls="m{{ year.name }}">
+              <button class="btn btn-link w-100{% unless forloop.first %} collapsed{% endunless %}" data-toggle="collapse" data-target="#m{{ year.name }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="m{{ year.name }}">
 	          {{ year.name }}
 	        </button>
 	      </h5>
 	    </div>
 	    <div id="m{{ year.name }}" class="collapse {% if forloop.first %}show{% endif %}" aria-labelledby="y{{ year.name }}" data-parent="#accordion">
 	      <div class="card-body">
-
 			<div class="list-group">
   {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
-
   {% for month in postsByMonth %}
     {% for item in month.items limit: 1 %}
                 <a class="list-group-item list-group-item-action" href="{{ site.url }}/{{ item.date | date: '%Y/%m' }}/">{{ month.name }}</a>
     {% endfor %}
   {% endfor %}
   			</div>
-  		</div>
+  		  </div>
+        </div>
   	</div>
 {% endfor %}
 </div>
