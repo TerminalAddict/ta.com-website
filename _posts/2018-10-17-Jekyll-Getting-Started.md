@@ -145,6 +145,7 @@ Now let's put some text in the file:
 > you *must* include the first two lines "---", this tells Jekyll to preprocess the file  
 
 {% highlight bash %}
+cat << EOF > assets/css/main.scss
 ---
 ---
 
