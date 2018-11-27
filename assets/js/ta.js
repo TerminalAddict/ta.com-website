@@ -71,7 +71,7 @@ $(document).ready(function(){
         $(this).addClass('display-'+rand_fsize);
         $(this).addClass('color-'+rand_color);
      }); 
-    $('a[target="_blank"').each(function() {
+    $('a[target="_blank"]').each(function() {
         $(this).attr('rel', 'noreferrer noopener');
     });
     var notFoundLink = $(location).attr('href');
