@@ -141,6 +141,7 @@ var verifyCaptcha = function(response) {
         _el.removeAttr("disabled");
         _el.addClass('button-primary dark-blue-bg');
         _el.attr('aria-disabled', 'false');
+        _el.attr('type', 'submit');
     }
 };
 
