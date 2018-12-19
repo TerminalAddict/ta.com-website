@@ -142,6 +142,7 @@ var verifyCaptcha = function(response) {
         _el.addClass('button-primary dark-blue-bg');
         _el.attr('aria-disabled', 'false');
         _el.attr('type', 'submit');
+        $('#g-recaptcha-response').attr('name','fields[g-recaptcha-response]');
     }
 };
 
