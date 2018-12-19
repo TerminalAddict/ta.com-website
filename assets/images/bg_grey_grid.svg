@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 10 10" style="enable-background:new 0 0 10 10;" xml:space="preserve">
+<style type="text/css">
+	.grey{fill:none;stroke:#E6E7E8;stroke-miterlimit:10;}
+</style>
+<g>
+	<line id="Base_line" class="grey" x1="0" y1="9.5" x2="10" y2="9.5"/>
+	<line id="Right_side_line" class="grey" x1="9.5" y1="0" x2="9.5" y2="10"/>
+	<line id="Centre_Horizontal" class="grey" x1="0" y1="4.5" x2="10" y2="4.5"/>
+	<line id="Center_Vertical" class="grey" x1="4.5" y1="0" x2="4.5" y2="9.9"/>
+</g>
+</svg>

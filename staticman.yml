@@ -1,5 +1,5 @@
 comments:
-  allowedFields     : ['name', 'email', 'url', 'message']
+  allowedFields     : ['name', 'email', 'url', 'message', 'g-recaptcha-response']
   branch            : "master"
   commitMessage     : "New comment."
   filename          : "comment-{@timestamp}"
@@ -9,7 +9,7 @@ comments:
   allowedOrigins    : ["terminaladdict.com"]
   pullRequestBody   : "Hey Paul,\n\nHere's a new entry for your approval. :tada:\n\nMerge the pull request to accept it, or close it to send it away.\n\n:heart: Your friend [Staticman](https://comments.netent.co.nz) :muscle:\n\n---\n"
   timezone          : Pacific/Auckland
-  requiredFields    : ['name', 'email', 'message']
+  requiredFields    : ['name', 'email', 'message', 'g-recaptcha-response']
   transforms:
           email     : md5
   name              : "terminaladdict.com Blog"

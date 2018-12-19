@@ -153,6 +153,7 @@ var verifyCaptcha = function(response) {
 
         $(form).addClass('disabled');
         $('#comment-form-submit').html('Posting ...');
+        $('#comment-form-submit').attr('disabled', true);
 
         $.ajax({
             type: $(this).attr('method'),
@@ -171,6 +172,7 @@ var verifyCaptcha = function(response) {
                 $('.post__comments-form .js-notice').removeClass('bg-success').addClass('bg-danger');
                 showAlert('<strong>Sorry, there was an error with your submission.</strong> Please make sure all required fields have been completed and try again.');
                 $(form).removeClass('disabled');
+                $('#comment-form-submit').attr('disabled', false);
             }
         });
 
