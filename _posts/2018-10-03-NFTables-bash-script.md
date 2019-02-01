@@ -224,7 +224,7 @@ if [ -f "$BANNED" ]; then
         else
             BANNED_LIST="$BANNED_LIST$BANNED_IP, "
 	fi
-    done &lt;$BANNED
+    done <$BANNED
     $nft add rule filter input meta iifname $INET_IFACE ip saddr {$BANNED_LIST} ct state new log prefix \"Banned IP: \" drop
 fi
 

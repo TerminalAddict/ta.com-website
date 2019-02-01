@@ -23,7 +23,7 @@ KEYFILE="~/path/to/private_key"
 ## A good way of using this to check into a repo
 #   pushd /my/git/repo
 #   ~/git-repos/mikrotik-backup/mikrotik-backup.sh -n paulwillard-mikrotik -i 192.168.1.254 -t text
-#   tail -n +2 paulwillard-mikrotik.daily.rsc &gt; paulwillard-mikrotik.daily.rsc.tmp &amp;&amp; mv paulwillard-mikrotik.daily.rsc.tmp paulwillard-mikrotik.daily.rsc
+#   tail -n +2 paulwillard-mikrotik.daily.rsc > paulwillard-mikrotik.daily.rsc.tmp && mv paulwillard-mikrotik.daily.rsc.tmp paulwillard-mikrotik.daily.rsc
 #   git comit -a
 #   git push
 #   popd
@@ -42,14 +42,14 @@ VERSION="2018-09-21"
 
 CheckIP() {
     if [[ "$1" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-        ping -c1 "$1" &gt; /dev/null 2&gt;&amp;1
+        ping -c1 "$1" > /dev/null 2>&1
         if [ "$?" = 0 ]; then
           return 0
         else
-          echo -e "\n${RED}$1 is not reachable${NC}\n" &amp;&amp; help
+          echo -e "\n${RED}$1 is not reachable${NC}\n" && help
         fi
     else
-       echo -e "\n${RED}$1 is not valid${NC}\n" &amp;&amp; help
+       echo -e "\n${RED}$1 is not valid${NC}\n" && help
     fi
     return 0
 }
@@ -57,16 +57,16 @@ CheckIP() {
 CheckDir() {
     DIR=$(dirname "$1")
     if [ ! -d "$DIR" ]; then
-        echo -e "\n${RED}Directory $DIR does not exist${NC}\n" &amp;&amp; help
+        echo -e "\n${RED}Directory $DIR does not exist${NC}\n" && help
     fi
     if [ ! -w "$DIR" ]; then
-        echo -e "\n${RED}Directory $DIR is not writable${NC}\n" &amp;&amp; help
+        echo -e "\n${RED}Directory $DIR is not writable${NC}\n" && help
     fi
     return 0
 }
 
 help() {
-    SCRIPT_NAME="$(basename "$(test -L "$0" &amp;&amp; readlink "$0" || echo "$0")")"
+    SCRIPT_NAME="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
     echo "$SCRIPT_NAME version $VERSION
 
 $SCRIPT_NAME is a small shell script that backups up a Mikrotik router
@@ -98,9 +98,9 @@ do
     esac
 done
 shift $((OPTIND-1))
-test -z "${REMOTE_HOST}" &amp;&amp; echo -e "\n${RED}IP address is mandatory${NC}\n" &amp;&amp; help
-test -z "${NAME}" &amp;&amp; echo -e "\n${RED}NAME is mandatory${NC}\n" &amp;&amp; help
-test -z "${TYPE}" &amp;&amp; echo -e "\n${RED}TYPE is mandatory${NC}\n" &amp;&amp; help
+test -z "${REMOTE_HOST}" && echo -e "\n${RED}IP address is mandatory${NC}\n" && help
+test -z "${NAME}" && echo -e "\n${RED}NAME is mandatory${NC}\n" && help
+test -z "${TYPE}" && echo -e "\n${RED}TYPE is mandatory${NC}\n" && help
 
 case $TYPE in
     text)   BACKUP='/export compact file=daily'
@@ -148,7 +148,7 @@ I trim the first line from the text backup (which is a date stamp), so git can s
 pushd /path/to/git-repo/mikrotik-backup
 git pull --quiet
 mikrotik-backup.sh -q -n paulwillard-mikrotik -i 192.168.1.254 -t text
-tail -n +2 paulwillard-mikrotik.daily.rsc &gt; paulwillard-mikrotik.daily.rsc.tmp &amp;&amp; mv paulwillard-mikrotik.daily.rsc.tmp paulwillard-mikrotik.daily.rsc
+tail -n +2 paulwillard-mikrotik.daily.rsc > paulwillard-mikrotik.daily.rsc.tmp && mv paulwillard-mikrotik.daily.rsc.tmp paulwillard-mikrotik.daily.rsc
 git commit -m "updated backup" -a
 git push --quiet
 popd

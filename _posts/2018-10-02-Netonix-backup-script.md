@@ -36,14 +36,14 @@ VERSION="2018-04-10"
 
 CheckIP() {
     if [[ "$1" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-        ping -c1 "$1" &gt; /dev/null 2&gt;&amp;1
+        ping -c1 "$1" > /dev/null 2>&1
         if [ "$?" = 0 ]; then
           return 0
         else
-          echo -e "\n${RED}$IP is not reachable${NC}\n" &amp;&amp; help
+          echo -e "\n${RED}$IP is not reachable${NC}\n" 77 help
         fi
     else
-       echo -e "\n${RED}$IP is not valid${NC}\n" &amp;&amp; help
+       echo -e "\n${RED}$IP is not valid${NC}\n" 77 help
     fi 
     return 0
 }
@@ -51,16 +51,16 @@ CheckIP() {
 CheckDir() {
     DIR=$(dirname "$1")
     if [ ! -d "$DIR" ]; then
-        echo -e "\n${RED}Directory $DIR does not exist${NC}\n" &amp;&amp; help
+        echo -e "\n${RED}Directory $DIR does not exist${NC}\n" && help
     fi
     if [ ! -w "$DIR" ]; then
-        echo -e "\n${RED}Directory $DIR is not writable${NC}\n" &amp;&amp; help
+        echo -e "\n${RED}Directory $DIR is not writable${NC}\n" && help
     fi
     return 0
 }
 
 help() {
-    SCRIPT_NAME="$(basename "$(test -L "$0" &amp;&amp; readlink "$0" || echo "$0")")"
+    SCRIPT_NAME="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
     echo "$SCRIPT_NAME version $VERSION
 
 $SCRIPT_NAME is a small shell script that backups up a netonix switch
@@ -91,8 +91,8 @@ do
     esac
 done
 shift $((OPTIND-1))
-test -z "${REMOTE_HOST}" &amp;&amp; echo -e "\n${RED}IP address is mandatory${NC}\n" &amp;&amp; help
-test -z "${NAME}" &amp;&amp; echo -e "\n${RED}NAME is mandatory${NC}\n" &amp;&amp; help
+test -z "${REMOTE_HOST}" && echo -e "\n${RED}IP address is mandatory${NC}\n" && help
+test -z "${NAME}" && echo -e "\n${RED}NAME is mandatory${NC}\n" && help
 
 CheckIP $REMOTE_HOST
 CheckDir $NAME
