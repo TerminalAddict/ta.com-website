@@ -68,6 +68,6 @@ Do better work that meets standards :) there are heaps of tools to help you out 
 
 Got some cool tools you use? Drop me a comment and let me know.
 
-[^1]: The HTML Validator extnesion has started causing an error in the console: Unchecked runtime.lastError: The message port closed before a response was received.
+[^1]: The HTML Validator extension has started causing an error in the console: Unchecked runtime.lastError: The message port closed before a response was received.
 [^2]: Some of my "paid" work is terrible ! The customers don't seem to value validation, and therefore won't pay for my time to work through errors in their web apps (read: Wordpress installs).
 [^3]: I use [Google Chrome - Workbox](https://github.com/GoogleChrome/workbox){: target="_blank"} as my ServiceWorker, you can read through my source to see how I use it.
