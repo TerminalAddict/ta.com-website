@@ -1,4 +1,5 @@
-<article id="comment{{ include.index }}" class="comment" itemprop="comment" itemtype="http://schema.org/Comment">
+<div itemscope itemtype="http://schema.org/Comment">
+<article id="comment{{ include.index }}" class="comment" itemprop="comment">
   <blockquote class="post-comment m-0 w-100 border-right border-top">
   <div class="float-left pr-3">
     {% if include.avatar %}
@@ -7,7 +8,8 @@
       <img class="comment_avatar rounded" src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&amp;s=50" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&amp;s=100 2x" alt="{{ include.name }}" height="50" width="50">
     {% endif %}
   </div>
-  <h3 class="comment_author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <div itemscope itemtype="http://schema.org/CreativeWork">
+  <h3 class="comment_author" itemprop="author">
       {% unless include.url == blank %}
 	      {% unless include.url == '' %}
 		<a rel="nofollow" href="{{ include.url }}" target="_blank"><span itemprop="name">{{ include.name }}</span></a>
@@ -18,6 +20,7 @@
         <span itemprop="name">{{ include.name }}</span>
       {% endunless %}
   </h3>
+  </div>
   <footer class="blockquote-footer p-0 m-0">
       {% if include.date %}
         {% if include.index %}<a href="#comment{{ include.index }}" itemprop="url">{% endif %}
@@ -28,3 +31,4 @@
   <div itemprop="text">{{ include.message | markdownify }}</div>
   </blockquote>
 </article>
+</div>
