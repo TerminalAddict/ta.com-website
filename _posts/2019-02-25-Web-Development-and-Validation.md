@@ -46,6 +46,7 @@ Here's a quote from Google:
 So Structured Data lets you define and describe your website data. I use this extensively at [Loudas.com](https://www.loudas.com){: target="_blank"}, as the data is "bloggy", and it's used fairly heavily here too.
 
 * Chrome "Lighthouse test"
+
 In the Chrome developer tools there is a tab titled "Audits". This uses a chrome tool called lighthouse.  
 This is awesome! Not only does it test validity of your website, but also suggested ways to make your website faster.
 
