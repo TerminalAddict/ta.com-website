@@ -35,7 +35,7 @@ This tool uses [HTML-Tidy](http://www.html-tidy.org/){: target="_blank"} in the 
 * The w3c validator: [Link here](https://validator.w3.org/){: target="_blank"}
 
 This is a fantastic tool, but interestingly, returns different results to the previous mentioned tool; it must use a different validation tool, or whatever.  
-Absolutely use this during development, and before signing of as complete, on any web project. [^2]
+Absolutely use this during development, and before signing off as complete, on any web project. [^2]
 
 * The Structure Data testing tool: [Link here](https://search.google.com/structured-data/testing-tool/u/0/){: target="_blank"}
 
@@ -43,11 +43,11 @@ Here's a quote from Google:
 
 > Google Search works hard to understand the content of a page. You can help us by providing explicit clues about the meaning of a page to Google by including structured data on the page.
 
-So Structured Data lets you define and describe your website data. I use exstensively at [Loudas.com](https://www.loudas.com){: target="_blank"}, as the data is "bloggy", and it's used fairly heavily here too.
+So Structured Data lets you define and describe your website data. I use this extensively at [Loudas.com](https://www.loudas.com){: target="_blank"}, as the data is "bloggy", and it's used fairly heavily here too.
 
 * Chrome "Lighthouse test"
 In the Chrome developer tools there is a tab titled "Audits". This uses a chrome tool called lighthouse.  
-This is awesome ! not only does it test validity of your website, but also suggested ways to make your website faster.
+This is awesome! Not only does it test validity of your website, but also suggested ways to make your website faster.
 
 {% include thumbnail.html img="Lighthouse-tests.png" %}
 
@@ -63,7 +63,7 @@ Actually, don't do that last one, instead just send them this link, and say some
 
 ## Conclusion
 
-Do better work that meets standards :) there is heaps of tools to help you out along the way.
+Do better work that meets standards :) there are heaps of tools to help you out along the way.
 
 Got some cool tools you use? Drop me a comment and let me know.
 
