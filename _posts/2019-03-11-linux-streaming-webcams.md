@@ -57,7 +57,7 @@ So let's create a directory by doing
 No let's create a config file by doing  
 `vi ~/.motion/motion.conf`
 
-Note: probably don't do this a user root
+Note: probably don't do this as user root
 
 Let's look at my config
 {% highlight bash %}
