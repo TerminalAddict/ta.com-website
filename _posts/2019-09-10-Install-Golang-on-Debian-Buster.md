@@ -5,13 +5,10 @@ comments: true
 categories: [linux, bash, golang]
 icon: golang.svg
 ---
-## What is Go / Golang ?
-[Go](https://golang.org/){:target="_blank"} is an open source programming language that makes it easy to build simple, reliable, and efficient software.
-
-## Installing in Debian
+[Go](https://golang.org/){:target="_blank"} is an open source programming language that makes it easy to build simple, reliable, and efficient software.  
 This is way easier than you think !! 
 
-### Step 1 - download
+## Step 1 - download
 Firstly, let make sure our system is up-to-date  
 `sudo apt update && sudo apt upgrade`
 
@@ -27,7 +24,7 @@ Now let's untar it
 And move it to an appropriate place (like /usr/local maybe?)  
 `sudo mv go /usr/local/go`  
 
-### Step 2 - setup your environment
+## Step 2 - setup your environment
 
 We're going to add a few environment variables in our .bashrc, and add to our $PATH.  
 so let's do that
@@ -52,7 +49,7 @@ What we've done is:
 * Told our bash environment where our working directory is (~/goProjects)
 * added two directories to our $PATH
 
-### Step 3 - verify your install
+## Step 3 - verify your install
 
 Here comes the easy bit, let's check our installed go version:  
 `go version `  
