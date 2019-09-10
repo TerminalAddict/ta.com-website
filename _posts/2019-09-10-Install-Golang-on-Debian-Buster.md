@@ -96,7 +96,7 @@ PKG_CONFIG="pkg-config"
 GOGCCFLAGS="-fPIC -m64 -pthread -fmessage-length=0 -fdebug-prefix-map=/tmp/go-build934234536=/tmp/go-build -gno-record-gcc-switches"
 {% endhighlight %}
 
-### Conclusion
+## Conclusion
 
 Simple eh? 👍
 
