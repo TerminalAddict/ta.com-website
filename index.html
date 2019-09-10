@@ -11,7 +11,7 @@ pagination:
 	{% else %}
 		{% assign categories = page.categories %}
 	{% endif %}
-    {% assign author = site.authors | where: 'short_name', page.author | first %}
+    {% assign author = site.authors | where: 'short_name', post.author | first %}
 
 			<article class="postSnippet bg-white rounded border mb-3" itemscope itemtype="http://schema.org/Article">
               <div class="row w-100 m-0 p-0">
