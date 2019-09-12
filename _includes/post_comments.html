@@ -21,8 +21,8 @@
 
       {% if page.comments == true %}
       <!-- Start new comment form -->
-      <h3 class="headline">Leave a Comment</h3>
-		<div class="thankbox">
+      <h3 class="headline d-print-none">Leave a Comment</h3>
+		<div class="thankbox d-print-none">
 				<h3 class="w-100 text-center">Liked what you've read?</h3>
 				<ol>
                     <li>Leave me a message<span class="font-italic">, or</span></li>
@@ -37,7 +37,7 @@
 				<strong><em>Pretty please !! :)</em></strong>
 				</p>
 		</div>
-      <form id="comment-form" class="w-100 shadow-lg bg-white p-2 post__comments-form" method="post" action="https://comments.netent.co.nz/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
+      <form id="comment-form" class="w-100 shadow-lg bg-white p-2 post__comments-form d-print-none" method="post" action="https://comments.netent.co.nz/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
       <blockquote class="blockquote  d-flex flex-column">
           <p class="p-0 m-0">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
           <p class="p-0 m-0">You won't be notified of replies, so come back and visit again!
