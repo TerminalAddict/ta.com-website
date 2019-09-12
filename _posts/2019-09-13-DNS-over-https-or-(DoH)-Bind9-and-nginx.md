@@ -4,6 +4,7 @@ author: paul
 comments: true
 categories: [networking, linux]
 icon: systems.svg
+slug: DoH
 ---
 So in a litte while Google Chrome is going to enable DNS over HTTPs, and Firefox has already enabled it, by default!  
 So I think to myself "myself, do you want cloudflare watching all your DNS queries?" - nope is the the answer!  
