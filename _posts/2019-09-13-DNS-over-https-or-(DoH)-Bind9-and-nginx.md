@@ -149,7 +149,7 @@ make install
 {% endhighlight %}
 
 Now let's config the DoH server:  
-the DoH server has a config in /etc/dns-over-https/doh-server.conf  
+The DoH server has a config in /etc/dns-over-https/doh-server.conf  
 You want to change the upstream to use 127.0.0.1:53 and that's about it, here's what I've got:
 {% highlight conf %}
 listen = [
@@ -324,14 +324,14 @@ You should get a JSON response like the following:
 }
 {% endhighlight %}
 
-## Config your browser
+## Configure your browser
 
-well in Firefox this is pretty easy.  
+Well in Firefox this is pretty easy.  
 Search your preferences / settings in Firefox for DNS.  
 
 {% include thumbnail.html img="FF-DoH-settings.png" %}
 
-In Chrome the setting will be released in version 78 I'm told, I guess I'll keep an eye out 🙃
+In Google Chrome the setting will be released in version 78 I'm told, I guess I'll keep an eye out 🙃
 
 ## Conclusion
 
