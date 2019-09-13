@@ -1,6 +1,7 @@
 ---
 layout: no_search
 title: Privacy Policy
+author: paul
 image: ta-bearded.png
 ---
 <h1>Privacy Policy</h1>

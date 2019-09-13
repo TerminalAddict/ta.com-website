@@ -2,6 +2,7 @@
 short_name: paul
 name: Paul Willard
 position: Senior Network and Systems Manager
+author: paul
 pic: /assets/images/paul.jpg
 ---
 <img src="{{ site.url }}/{{ page.pic }}" class="float-left rounded-circle shadow-lg" />
