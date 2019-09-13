@@ -3,6 +3,7 @@ layout: post
 author: paul
 comments: true
 categories: [linux, bash]
+slug: git-server-with-nginx
 icon: linux.svg
 ---
 Firstly, getting a [git](https://git-scm.com/){:target="_blank"} server up and running is pretty easy.  
