@@ -24,9 +24,9 @@
   {%- assign og_type = "website" -%}
 {%- endif -%}
 
+
 <title id="pageTitle">{{ page.title }}</title>
 <meta name="description" content="{{ seo_description }}" />
-
 {% if author.name %}
   <meta name="author" content="{{ author.name | default: author.name }}" />
 {% endif %}

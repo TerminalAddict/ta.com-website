@@ -9,6 +9,7 @@ title: Archives
     <div class="list-group w-100">
 		{% for post in page.posts %}
 		<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
+		<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="dateModified">{{ post.date | date_to_string }}</time>
 		<a itemprop="headline" class="list-group-item list-group-item-action w-100" href="{{ site.url }}{{ post.url }}">{{post.title}}</a>
 		{% endfor %}
     </div>
