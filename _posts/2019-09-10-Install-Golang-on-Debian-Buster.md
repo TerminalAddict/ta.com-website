@@ -5,7 +5,7 @@ comments: true
 categories: [linux, bash, golang]
 icon: golang.svg
 ---
-[Go](https://golang.org/){:target="_blank"} is an open source programming language that makes it easy to build simple, reliable, and efficient software.  
+[Golang, or just simply Go](https://golang.org/){:target="_blank"} is an open source programming language that makes it easy to build simple, reliable, and efficient software.  
 This is way easier than you think !! 
 
 ## Step 1 - download
