@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/TerminalAddict/ta.com-website#readme",
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "default-passive-events": "^1.0.10",
     "jquery": "^3.4.1",
-    "popper.js": "^1.15.0"
+    "popper.js": "^1.16.0"
   }
 }
