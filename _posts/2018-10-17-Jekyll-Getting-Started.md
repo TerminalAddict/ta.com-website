@@ -200,7 +200,7 @@ EOF
 
 We don't need the old file anymore so let's remove it `rm assets/css/main.scss`. 
 
-finally, in your index.html replace the css line with:
+finally, in your _layouts/default.html replace the css line with:
 
 {% highlight html %}
 {% raw %}
