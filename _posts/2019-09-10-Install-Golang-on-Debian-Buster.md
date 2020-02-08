@@ -29,7 +29,7 @@ And move it to an appropriate place (like /usr/local maybe?)
 We're going to add a few environment variables in our .bashrc, and add to our $PATH.  
 so let's do that
 {% highlight bash %}
-cat << EOF >> ~/.bashrc
+cat << 'EOF' >> ~/.bashrc
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/goProjects
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
