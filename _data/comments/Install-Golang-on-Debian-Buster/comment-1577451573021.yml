@@ -1,0 +1,11 @@
+_id: b96a0010-28a8-11ea-b100-0184366a4925
+_parent: >-
+  https://terminaladdict.com/linux/bash/golang/2019/09/10/Install-Golang-on-Debian-Buster.html
+message: "Guess it should be:\r\ncat << 'EOF' >> ~/.bashrc\r\n\r\nWithout the quotes variables in the here-doc are interpolated ..."
+name: David Roskams
+email: b5bf4ee7464a16e8af3ad624c6408c37
+url: ''
+hidden: ''
+g-recaptcha-response: >-
+  03AOLTBLRc3aQKk0OjTzKeJnTb87D7LdxQjphKWOPFAcRxzmjqLd01HCx7a9jW0Zoeoo8tJrqG7xXufpcIcAGVJoDqu05nw8M6qvR8Rm1IPIo5w5HltnZ3nHQ_kCexu-1fJUFNr_znP6nbFr6LhrOM1lGa_ceS5FbIymvjf943VOEro1DfA7gzGBTshtXyA5H84nmqD91_M_1RpxE4r8Ayod37wWXA2WOHmAZj8Dv8J3GeE4FfuRQVE2RSjNgqJZu0fR4Fn8Agscrc61gi7tjUV3bTjJ7DpTwmASpUjuQdUfkOX0i3LXjHxlmxx0JkGZtCkigV9y6Vh2XPGS_oWitWESEIzScqdk_tOwXO8b9rkX0sWtn4mlZtuZbhHEhhbZIb69UEfv0BtmFou8fNHvokEr-c4BnCMXa-TmuILP8qcNNuD0D6YkK2rbTCu2xTnCHU5Z50T3hAwtcxzw8Ky8S37eGfbhr91newt3FdVRfQ-NsVkqHbA-W3PHuSEEPWW9DlwdZr42ZAWOP1-GiPWJcJqdcGU21lzxLe9w
+date: '2019-12-27T12:59:32.888Z'
