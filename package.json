@@ -21,6 +21,6 @@
     "bootstrap": "^4.4.1",
     "default-passive-events": "^1.0.10",
     "jquery": "^3.4.1",
-    "popper.js": "^1.16.0"
+    "popper.js": "^1.16.1"
   }
 }
