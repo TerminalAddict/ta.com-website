@@ -1,0 +1,14 @@
+_id: 25f30c50-581e-11ea-a873-33f055853536
+_parent: 'https://terminaladdict.com/networking/linux/2019/09/13/DoH.html'
+message: >-
+  I assumed from the config entries `cert` and `key` that the DNS-over-HTTPS
+  server would serve TLS. [The code would appear to back me
+  up](https://github.com/m13253/dns-over-https/blob/master/doh-server/server.go#L114)
+  but I'll have to try an installation before I can say for sure.
+name: Michael Newton
+email: 16031c8aecf65e12158e38b96419449e
+url: 'https://mike.eire.ca/'
+hidden: ''
+g-recaptcha-response: >-
+  03AERD8Xrngtnec8bLqfsrUWhUVCWx3Miol01x3xaiWwNA9Pzv7wsm7_HkiadkaI-Czyn8Bl-eFNJ_mvdz-j3rDUxdzPvfT3HKq8UKbOIekljSvABgIqb6wiz3aTLSFrwMpBY-xwOrBehz0py_Y7Hn-1irpBD-dKTaBO0qVwhkYHkzmGdCh6Ek2vrHZKCIps59CPYm_QqhNZDKauYeMYFey0F9oaBYV63EGLPDCvFRP9kiXqf4j5ETh8RR3d27Q4_Vs6hENQHp6UbFLwvN0HIJ90aH5MQALByCtvIu-6Pz0mmdZUj-zQq6QS5U_L4a69Ak3He3l5KMF7BNwkRCcekUwHH9wrUimwR4prCIr19mOcNzGZjnZ2Zw8jdUqDw5m4GjBEJ2q5pamTdX
+date: '2020-02-25T22:28:30.142Z'
