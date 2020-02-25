@@ -1,0 +1,10 @@
+_id: 832a9c30-5805-11ea-a873-33f055853536
+_parent: 'https://terminaladdict.com/networking/linux/2019/09/13/DoH.html'
+message: "Hi Michael,\r\ngood questions.\r\n\r\nSo after 5 seconds of testing, it looks like Firefox does support HTTP basic auth, so yes, you could configure your DNS server as user:pass@ns1.example.com \r\n\r\nThe need for Nginx is to server SSL certs (HTTPS); you could use anything (maybe write your own Go web service? or fork the DoH server and add in SSL support), so long as it has the ability to 1) reverse proxy to the DoH server, and 2) server SSL certificates, or 3) write a new DoH server that supports SSL \U0001F600\r\nThis DoH server doesn't have the ability to communicate via SSL."
+name: Paul
+email: fa87575ff2e21fe16d2c1eafd8d9c7b4
+url: 'https://terminaladdict.com/'
+hidden: ''
+g-recaptcha-response: >-
+  03AERD8XpwSYUw5-qTTdFaeMc_f6D7M8_62Q3x4zk02f9wHcsSuj5bMkGISDYR4n13otS4K5SihjkeedMmCaK-QMJqqmFD7DhkMzTazv7HA9CWa8C_qF3_bGBaWiMGvnsYuBcPwilkKYthYRywthRWeUCF1em_tor4jE6SfRbxJjcTrC9ZKUx-tQZUbACSrqBYJnFhQUFwuX58WVIF5Faqhrhz4v5VK_MqZtXkYHefSq3b5ZK4OT1_oFadcUv9rfCyG0akzkt37qFMWVcLEZ-umt5I2QVMZ-TVTSXuJtr5LO3HkOT3-_KI7T9bML5o2leh9Lnab6MoW8GFlr4e87R5xr2jrS_5NmKkXWDv_-dNEK0FIrboGKU3csPS4xDW4v9FJy9MyURHu6StzSSzYu65eCZdJaiD5l5crA
+date: '2020-02-25T19:32:09.173Z'
