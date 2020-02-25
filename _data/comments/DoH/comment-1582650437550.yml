@@ -1,0 +1,16 @@
+_id: 455bcb40-57f1-11ea-80bf-515f41a18510
+_parent: 'https://terminaladdict.com/networking/linux/2019/09/13/DoH.html'
+message: >-
+  Nice article, I have 2 questions. Do clients support authentication? Like,
+  assuming Nginx was set up for HTTP basic auth, could I use a full URL like
+  https://user:password@host/ in the Firefox preferences above? Which brings me
+  to my second question, is there a need for Nginx in this setup? Assuming you
+  aren't already running a web server on 443 of course, it seems like the DoH
+  server can listen directly for requests.
+name: Michael Newton
+email: 16031c8aecf65e12158e38b96419449e
+url: 'https://mike.eire.ca/'
+hidden: ''
+g-recaptcha-response: >-
+  03AERD8Xq8tVKnBP7RdPkwMd_C7NLQOrCSORu4f1434JghWWxs4wDaVHOB6yGjFh7mIXb8iRwRJDVci-fgTEV69wn14-GDhxf28Fsf6FYxLTb69Y_VBayclpxUv7qwXNGIFAadsslSBruihJh_VQ8UikGlxlE7jNRHZ81bfM1m30tLKeiIC4uJAGSm8yb4MlKatkz7dJJvDdLHX4nd1xV156HmJyBjXsQ-BztYkVwqEHU1-_IEeJcShQCNgMFMb_TkCWEuTXBrj20Q3QWOxUj02Pd5CaZAZ3v7k0fIMwdyZVMK7tfEskL23Xjth6qbQm_3Bs941-AK8omVN_oswPjx1yiHdlCgq4i1FXTJNu4PSGSpIvbOKpDd2t4GmB6HtQcHyrx9CIn6DPRpp2LzLzS-lH-74TMtZ9Xcraj60LJ_9e5cVn9J5xYQr-QvWUdb9nlnIhjqLPyGLffW
+date: '2020-02-25T17:07:16.561Z'
