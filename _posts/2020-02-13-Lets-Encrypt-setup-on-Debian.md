@@ -10,7 +10,7 @@ So in a few of my posts I've mentioned [Let's Encrypt](https://letsencrypt.org){
 In this post I'll explain how I set up [Nginx](https://www.nginx.com){: target="_blank"} to use Let's Encrypt SSL certs.
 
 ## Initial install and setup
-I decide a while ago that [Dehydrated](https://github.com/dehydrated-io/dehydrated){: target="_blank"} would be the scipt I would use to manage my SSL certs. And conveniently for me there is a Debian package. So let's install it.
+I decide a while ago that [Dehydrated](https://github.com/dehydrated-io/dehydrated){: target="_blank"} would be the script I would use to manage my SSL certs. And conveniently for me there is a Debian package. So let's install it.
 
 ```aptitude install dehydrated``` 
 
