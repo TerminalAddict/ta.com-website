@@ -1,0 +1,10 @@
+_id: 05f4cd50-7559-11ea-aacb-f9e9a08be2d0
+_parent: 'https://terminaladdict.com/networking/linux/2019/09/13/DoH.html'
+message: "Hi,<br />\r\nyou need the doh server to interpret between a DNS conversation, and a http conversation.<br />\r\n<br />\r\nThe doh server returns JSON to nginx.<br />\r\n<br />\r\nSo you need nginx for SSL and http conversation (although you may not, as Michael points out above)<br />\r\nyou need the DoH server as an interpreter between http and dns.<br />\r\nand you need bind (or some other) dns server.<br />"
+name: Paul
+email: 880cbebb0883e813fd578c14c22828e0
+url: 'https://terminaladdict.com/'
+hidden: ''
+g-recaptcha-response: >-
+  03AHaCkAYeuftjStmS1NJiElEiQE9NYs8xdNoQoidfFItBpJVrCLrUwR-QpTev1iqS9dZE2vaYxShWSB7NiPOLjpE0wpybXz7hBXo_8LwWPLaTT_CPkIc3uwXddL6CIJ06iYdTQudjUFuI2PSXOMTz51MQ-7XOyMW_vCS54h40uFJclOHsyUbScBkOs4YvOU3ztcMAm_yWTrS09H0PWMH11FhMSMt9dlo5yLSFeeMv0egQSDTwD5YwiI7j3w9QQ2br01qwOxWBiVX66MI9rgw2A7LFTy88jfC7ffFp9GZgGsl7I1N5Ye9B7p6GEvhqDbg0KZaqO7iShvXeVU9JFDC7YDnCzhAZ7ELtrlPcsO_iewaNHWDP87hKMg7Dj0U8BTdQgi2neDYb8ct5TiZz5kZ335doYVo3s-MJug
+date: '2020-04-03T03:13:00.505Z'
