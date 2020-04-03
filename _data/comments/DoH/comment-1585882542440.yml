@@ -1,6 +1,6 @@
 _id: 9b14f2a0-7556-11ea-aacb-f9e9a08be2d0
 _parent: 'https://terminaladdict.com/networking/linux/2019/09/13/DoH.html'
-message: "Hi Paul, thanks for writing this.\r\nWhy do you need for a \"package\" don-over-https? Because I think that \"the dns-query\" from nginx can head straight to Bind9. Could you explain this more plase? \r\nThankyou."
+message: "Hi Paul, thanks for writing this.\r\nWhy do you need for a \"package\" dns-over-https? Because I think that \"the dns-query\" from nginx can head straight to Bind9. Could you explain this more plase? \r\nThankyou."
 name: Adib
 email: e1e72dc1798b8c44bd5c99179085c171
 url: ''
