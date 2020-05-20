@@ -1,7 +1,7 @@
 _id: b2b93530-9a43-11ea-9779-3dabfed0a16e
 _parent: >-
   https://terminaladdict.com/linux/bash/osx/2018/10/05/Debian-Stretch-Timemachine.html
-message: "I've just rebuilt this using Ubuntu Focal (2020 release) and this file `/etc/netatalk/AppleVolumes.default` is no longer used <br />\r\n<br />\r\nInstead I have this file `/etc/netatalk/afp.conf` <br />\r\nLooks like this:<br />\r\n```\r\n;\r\n; Netatalk 3.x configuration file\r\n;\r\n\r\n[Global]\r\n; Global server settings\r\n\r\n[Timemachine]\r\npath = /mnt/data-volume/Timemachine/paul\r\ntime machine = yes\r\n```"
+message: "I've just rebuilt this using Ubuntu Focal (2020 release) and this file `/etc/netatalk/AppleVolumes.default` is no longer used <br />\r\n<br />\r\nInstead I have this file `/etc/netatalk/afp.conf` <br />\r\nLooks like this:<br />\r\n```\r\n;\r\n; Netatalk 3.x configuration file\r\n;\r\n\r\n[Global]\r\n; Global server settings\r\n\r\n[Timemachine]\r\npath = /mnt/data-volume/Timemachine/paul\r\ntime machine = yes\r\n```\r\n<br />\r\nalso note, on my Macbook (client) I have to run this command<br />\r\n```\r\ndefaults write com.apple.systempreferences TMShowUnsupportedNetworkVolumes 1\r\n```\r\n"
 name: Paul
 email: 338a35947ff4ad872f766a826b8fe533
 url: 'https://terminaladdict.com/'
