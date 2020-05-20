@@ -1,0 +1,11 @@
+_id: b2b93530-9a43-11ea-9779-3dabfed0a16e
+_parent: >-
+  https://terminaladdict.com/linux/bash/osx/2018/10/05/Debian-Stretch-Timemachine.html
+message: "I've just rebuilt this using Ubuntu Focal (2020 release) and this file `/etc/netatalk/AppleVolumes.default` is no longer used <br />\r\n<br />\r\nInstead I have this file `/etc/netatalk/afp.conf` <br />\r\nLooks like this:<br />\r\n```\r\n;\r\n; Netatalk 3.x configuration file\r\n;\r\n\r\n[Global]\r\n; Global server settings\r\n\r\n[Timemachine]\r\npath = /mnt/data-volume/Timemachine/paul\r\ntime machine = yes\r\n```"
+name: Paul
+email: 338a35947ff4ad872f766a826b8fe533
+url: 'https://terminaladdict.com/'
+hidden: ''
+g-recaptcha-response: >-
+  03AGdBq25UA-TABIbrkTbH9-CEmLy1s-AKVgDl-p3EsMy_N0mc_HFAZKqXhcaBJV7q2cy8_n9EsqUvtvmSNzUgQANcrKHxORabYF996freF4rjleGQFcJhPXN63KnxL0PkK9OIlLxtCdmcFtizWCJGDI72gPfC8p3FM6O5vUAlhFO7CM9SRmBtgP8A7Uo9dcB1jAbPeERcb4XXmmn7Y9u_keX0GRd2SKtLLz5ezq153d4XdunS_S2V6xxl6yfQr3_M_OuQLWb4A1ooazk0i6r3d4RNrnY_qlRy0bmM71zJ_vBfenihm-lbZCilxczSc_k8ksKnttW5MXOHkPjG-jym5YH1FdRDHF7niXWS3LsqUnBVZKtgZnVw-4Rx0qleMaUOvbBoL_Nk4QSJ0ygNzZdQWqDJ2U5tc9FE1Q
+date: '2020-05-20T02:43:34.424Z'
