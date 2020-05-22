@@ -18,7 +18,7 @@ sass:
         - assets/css
         - assets/vendor
     style: compressed
-exclude: [node_modules, Gemfile, package.json, package-lock.json, .gitignore, README.md, ctl.sh, static_prototype, mogrify_images_to_400px_wide.sh, staticman.yml, .jekyll-metadata]
+exclude: [node_modules, Gemfile, package.json, package-lock.json, .gitignore, README.md, ctl.sh, static_prototype, mogrify_images_to_400px_wide.sh, staticman.yml, .jekyll-metadata, Makefile]
 defaults:
   - scope:
       path: ""
