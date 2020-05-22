@@ -84,6 +84,8 @@ serve:
 rsync:
 	@if [ ! -d "_site" ]; then echo "_site/ directory does not exist !"; exit 0; fi
 	@rsync -avz --delete _site/* $(REMOTE_USER)@$(REMOTE_HOST):$(REMOTE_PATH)
+	@echo "Updating $(REMOTE_PATH)/assets/search.json using $(REMOTE_PATH)/assets/php/json.php"
+	@ssh $(REMOTE_USER)@$(REMOTE_HOST) "php $(REMOTE_PATH)/assets/php/json.php > $(REMOTE_PATH)/assets/search.json"
 
 PingSearchEngine:
 	@echo "Pinging ping-o-matic, Google, and Bing"
