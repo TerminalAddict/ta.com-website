@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: blank
 ---
 {% capture styles %}
   {% include main.css %}
