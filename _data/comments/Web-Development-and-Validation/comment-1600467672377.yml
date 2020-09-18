@@ -1,7 +1,7 @@
 _id: 41ed8a30-f9fd-11ea-aa5e-e948fa1c83f1
 _parent: >-
   https://terminaladdict.com/development/2019/02/25/Web-Development-and-Validation.html
-message: "I've changed from Google Structed Data test to [https://github.com/glitchdigital/structured-data-testing-tool](https://github.com/glitchdigital/structured-data-testing-tool){: target=\"_blank\"} <br />\r\nUsage: <br />\r\n```sdtt --url https://terminaladdict.com --presets Google,SocialMedia -i``` <br />\r\n<br />\r\nInstall using: <br />\r\n```sudo npm i structured-data-testing-tool -g``` <br />\r\nOf course you have to have Nodejs installed first"
+message: "I've changed from Google Structured Data test to [https://github.com/glitchdigital/structured-data-testing-tool](https://github.com/glitchdigital/structured-data-testing-tool){: target=\"_blank\"} <br />\r\nUsage: <br />\r\n```sdtt --url https://terminaladdict.com --presets Google,SocialMedia -i``` <br />\r\n<br />\r\nInstall using: <br />\r\n```sudo npm i structured-data-testing-tool -g``` <br />\r\nOf course you have to have Nodejs installed first"
 name: Paul
 email: fa87575ff2e21fe16d2c1eafd8d9c7b4
 url: 'https://terminaladdict.com/'
