@@ -1,0 +1,11 @@
+_id: 41ed8a30-f9fd-11ea-aa5e-e948fa1c83f1
+_parent: >-
+  https://terminaladdict.com/development/2019/02/25/Web-Development-and-Validation.html
+message: "I've changed from Google Structed Data test to [https://github.com/glitchdigital/structured-data-testing-tool](https://github.com/glitchdigital/structured-data-testing-tool){: target=\"_blank\"} <br />\r\nUsage: <br />\r\n```sdtt --url https://terminaladdict.com --presets Google,SocialMedia -i``` <br />\r\n<br />\r\nInstall using: <br />\r\n```sudo npm i structured-data-testing-tool -g``` <br />\r\nOf course you have to have Nodejs installed first"
+name: Paul
+email: fa87575ff2e21fe16d2c1eafd8d9c7b4
+url: 'https://terminaladdict.com/'
+hidden: ''
+g-recaptcha-response: >-
+  03AGdBq27HZzD8rooRQ9q2-dm-39fcvbaXrUR5fo9q4SW7XdNDhkQNUMYHLn7okWTBeuekj3zWykNBucs18LimcIJohXu5Tuv_SaYpVp6qWvaeW-tBxNlaJFcqJLfVlyiQGMeb3R4Rp3Y55wwgk0ZaXQPCA-AnJRf9j2KbYUzjfYkLRHqqounQajmSx8Gg-9-viB1-1IM5rYNHEiuhANsvC9QGRW8JUqqhCoGE0MB0zWZSuR3tDY2b7xH4u083RWVFPQtdfaXKMTIIj311jvPkX18ozVC5j80shyD7DjI7R9O5BcYvJjo9Z4InA5mgtKzTHRL3jF7Lm3XdLkqnAbOIrrDemFqMI_0YJhhSOH0fF1c1PZnUBAruoNjfzZbdO1FxMX_20zn1AHR1nuMzTCYlM7Hqw1hDyLtreYS6f5dwRhL-Tk-WhdrpSpwy6Iip5s89omHDIWe5nOV5
+date: '2020-09-18T22:21:12.084Z'
