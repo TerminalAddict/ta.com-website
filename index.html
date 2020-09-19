@@ -30,6 +30,11 @@ pagination:
                                     <link itemprop="url" href="{{ site.url }}{{author.pic}}" />
                                 </div>
                             </div>
+                            <div class="d-none" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name">{{ author.name }}</span>
+                                <img src="{{ site.url }}{{author.pic}}" itemprop="image" alt="Photo of {{ author.name }}"/>
+                                <span itemprop="jobTitle">{{ author.position }}</span>
+                            </div>
                           </a>{% endif %}
                       </div>  |  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ post.date | date_to_string }}</time>  |  {% for category in categories %}<a class="dark-blue-link" href="{{ site.url }}/categories/#{{category|slugize}}" rel="category tag">{{category}}</a>{% if forloop.last != true %},{% endif %} {% endfor %}
                     </div>

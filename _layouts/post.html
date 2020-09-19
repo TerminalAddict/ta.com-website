@@ -32,6 +32,11 @@
                                <link itemprop="url" href="{{ site.url }}{{author.pic}}" />
                              </div>
                           </div>
+                          <div class="d-none" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                              <span itemprop="name">{{ author.name }}</span>
+                              <img src="{{ site.url }}{{author.pic}}" itemprop="image" alt="Photo of {{ author.name }}"/>
+                              <span itemprop="jobTitle">{{ author.position }}</span>
+                          </div>
                       </a>
                   </div>
               </footer>

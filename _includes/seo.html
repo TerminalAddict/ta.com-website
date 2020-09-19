@@ -37,6 +37,7 @@
 <meta property="og:title" content="{{ page.title | default: site.site_name | markdownify | strip_html | strip_newlines | escape_once }}" />
 <meta property="og:url" content="{{ canonical_url }}" />
 <meta property="og:image" content="{{ site.url }}{{ site.post-images }}{{ page.image }}" />
+<meta property="og:image:alt" content="{{ page.title | default: site.site_name | markdownify | strip_html | strip_newlines | escape_once }} - {{ site.url }}" />
 <meta property="og:description" content="{{ seo_description }}" />
 
 {% if site.twitter.username %}
