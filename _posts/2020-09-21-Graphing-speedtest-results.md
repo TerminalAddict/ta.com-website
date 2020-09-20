@@ -4,10 +4,10 @@ author: paul
 comments: true
 categories: [bash, networking]
 icon: bash.svg
-slug: graphing-speeedtest-results
+slug: graphing-speedtest-results
 ---
 I can be described as a network engineer, sometimes, and sometimes a system admin. As such, keeping track of how customers internet is working is reasonably important.  
-Most customers use [Speeedtest.net](https://www.speedtest.net/){: target="_blank"} as a way of testing their internet connection, so I figured I would clobber together a script that keeps a bit of history, and make some pretty graphs 😅.
+Most customers use [Speedtest.net](https://www.speedtest.net/){: target="_blank"} as a way of testing their internet connection, so I figured I would clobber together a script that keeps a bit of history, and make some pretty graphs 😅.
 
 
 So my steps are going to be:
