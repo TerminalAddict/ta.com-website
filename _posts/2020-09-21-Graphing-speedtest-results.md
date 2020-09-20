@@ -68,7 +68,7 @@ Do you accept the license? [type YES to accept]:
 
 Now you're ready to go!
 
-You can list out the nearest servers likee so:  
+You can list out the nearest servers like so:  
 
 {% highlight bash %}
 /usr/local/bin/speedtest -L
@@ -201,7 +201,7 @@ TRAF=/var/www/html/rrd
                 -c "MGRID#AAAAAA" \
                 -c "FRAME#202020" \
                 -c "ARROW#FFFFFF" \
-                -u 1.1 -l 0 -v "Ping" -w 1100 -h 250 -t "DPing Response - `/bin/date +%A", "%d" "%B" "%Y`" \
+                -u 1.1 -l 0 -v "Ping" -w 1100 -h 250 -t "Ping Response - `/bin/date +%A", "%d" "%B" "%Y`" \
                 DEF:echoreply=$TRAF/echoreply.rrd:echoreply:AVERAGE \
                 AREA:echoreply\#FF0000:"Ping Response (ms)" \
                 GPRINT:echoreply:MIN:"Min\: %3.2lf " \
