@@ -204,9 +204,9 @@ done
 {% endhighlight %}
 
 What the script does is: 
-1. Set up some vairable, including a variable named PHPFILE, that creats a PHP file for some directories.
-2. in a for loop, for each awtstas.{websitename}.conf do
-  * make a direcory if needed (mkdir -p)
+1. Set up some vairable, including a variable named PHPFILE, that creates a PHP file for some directories.
+2. in a for loop, for each awstats.{websitename}.conf do
+  * make a directory if needed (mkdir -p)
   * a new for loop, that creates a PHP file in the root directory, and the $YEAR directory
   * Updates the stats ```$AWSTATS -config=$c -update```
   * create some soft links for ease of use
