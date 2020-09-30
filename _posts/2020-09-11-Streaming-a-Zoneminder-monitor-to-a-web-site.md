@@ -153,4 +153,6 @@ Here's the fun bit .. simple HTML !
 
 and here is the working result:  
 
-<img src="https://www.paulwillard.nz/assets/php/zoneminder_stream.php" alt="Driveway view" title="driveway view" class="shadow-lg rounded w50" />
+{% include thumbnail.html img="zoneminder_stream.png" %}
+
+*note: this is a screenshot of my working camera
