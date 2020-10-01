@@ -153,6 +153,6 @@ Here's the fun bit .. simple HTML !
 
 and here is the working result:  
 
-{% include thumbnail.html img="zoneminder_stream.png" %}
+{% include thumbnail.html img="zoneminder_stream.jpg" %}
 
 *note: this is a screenshot of my working camera
