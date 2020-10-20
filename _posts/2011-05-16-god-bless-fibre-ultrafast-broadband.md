@@ -1,4 +1,5 @@
 ---
+comments: true
 id: 1062
 title: God bless fibre (ultrafast broadband)
 categories:
