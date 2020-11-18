@@ -1,0 +1,11 @@
+_id: a6545690-29d5-11eb-a05e-7bfabab812bc
+_parent: >-
+  https://terminaladdict.com/linux/jekyll/bash/development/2018/10/17/Jekyll-Getting-Started.html
+message: "Hi mery,\r\nI'm guessing that you have this Jekyll site in a subdirectory?\r\nas the code in this example is refering to absolute URLs (i.e. /node_modules/ not  node_modules/ )\r\n\r\nTwo could fix this:\r\n1) set your baseurl in _config/yml\r\n```\r\ncat _config.yml | grep baseurl\r\nbaseurl: /\r\n```\r\nor\r\n2) change remove the leading / from the default.html Layout"
+name: Paul
+email: fa87575ff2e21fe16d2c1eafd8d9c7b4
+url: 'https://terminaladdict.com/'
+hidden: ''
+g-recaptcha-response: >-
+  03AGdBq27ANlJCRqwJjy-x4KNfK-JEUFMO6o_HZYk4PMkvlxc8z0nSt62mcxaGlEQf7XyoUJ3f5GUDtY71Fu8wg3r9SIFKI1e4Kxg6zbaBkKizN09LULP7rRj2AT9Yoa0Ca6vhZNHP-oXWX8FtemuREMhdmbm1DSg0zR_KS3uSWr-pjq1DMIkuCy1eqOw_fhuEuL5-ZhIkHrx3G6-ArsOzSriqKmA1-ka1CAQAWDEZ7RwgIOGQfosXfyNH39LuvrquBoVlZq4KNIXrt9PomoRucbv1JkCjIkKjh--XdOe94GYAsQDFibUd3caz570v_e_mp7akv54jku66__hMIoLgFiTBy9y7EpTzsOema-V0X8BKDXd2X7HYi2Mqnyo4VlCQGko-98JIah19RJ5ct1vFCWzSBq_VcVd0WR3CGJ_y2QkPZ-_FWw7VB2QdkzRUgldxlWq_Io6wOhZ_3vb4s8I-vavM7EArrabUfQ
+date: '2020-11-18T19:38:36.429Z'
