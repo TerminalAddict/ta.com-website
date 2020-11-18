@@ -1,7 +1,7 @@
 _id: a6545690-29d5-11eb-a05e-7bfabab812bc
 _parent: >-
   https://terminaladdict.com/linux/jekyll/bash/development/2018/10/17/Jekyll-Getting-Started.html
-message: "Hi mery,\r\nI'm guessing that you have this Jekyll site in a subdirectory?\r\nas the code in this example is refering to absolute URLs (i.e. /node_modules/ not  node_modules/ )\r\n\r\nTwo could fix this:\r\n1) set your baseurl in _config/yml\r\n```\r\ncat _config.yml | grep baseurl\r\nbaseurl: /\r\n```\r\nor\r\n2) change remove the leading / from the default.html Layout"
+message: "Hi mery,\r\nI'm guessing that you have this Jekyll site in a subdirectory?\r\nas the code in this example is refering to absolute URLs (i.e. /node_modules/ not  node_modules/ )\r\n\r\nTwo things could fix this:\r\n\r\n* Set your baseurl in _config.yml\r\n```\r\ncat _config.yml | grep baseurl\r\nbaseurl: /\r\n```\r\nor\r\n\r\n* Remove the leading / from the default.html Layout"
 name: Paul
 email: fa87575ff2e21fe16d2c1eafd8d9c7b4
 url: 'https://terminaladdict.com/'
