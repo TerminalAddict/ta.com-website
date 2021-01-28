@@ -176,7 +176,8 @@ What I do is comment out the two lines that point to the certs, reload Nginx, th
 
 ## Apache Config
 Setting up Apache is pretty straight forward, you need a .well-known directive:  
-{% highlight bash %} lHost *:80>
+{% highlight bash %}
+ <VirtualHost *:80>
     ServerAdmin paul@paulwillard.nz
     DocumentRoot /var/www/html/terminaladdict.com
     ErrorLog ${APACHE_LOG_DIR}/error.log
@@ -212,76 +213,76 @@ For the SSL port 443 (HTTPS) config:
 
 {% highlight bash %}
 <IfModule mod_ssl.c>
-        <VirtualHost _default_:443>
-                ServerAdmin paul@paulwillard.nz
-                DocumentRoot /var/www/html/terminaladdict.com
-                ErrorLog ${APACHE_LOG_DIR}/error.log
-                CustomLog ${APACHE_LOG_DIR}/access.log combined
-                ServerName www.terminaladdict.com;
- 
-                SSLEngine on
-                SSLCertificateFile      /var/lib/dehydrated/certs/terminaladdict.com/fullchain.pem
-                SSLCertificateKeyFile /var/lib/dehydrated/certs/terminaladdict.com/privkey.pem
- 
-                Alias /.well-known/acme-challenge /var/www/dehydrated
-                <Directory /var/www/dehydrated>
-                	Options None
-                	AllowOverride None
-                	# Apache 2.x
-                	<IfModule !mod_authz_core.c>
-                		 allow,deny
-                		 from all
-                	</IfModule>
-                	# Apache 2.4
-                	<IfModule mod_authz_core.c>
-                		 all granted
-                	</IfModule>
-                RedirectMatch 404 "^(?!/\.well-known/acme-challenge/[\w-]{43}$)"
-                </Directory>
-        </VirtualHost>
-		RewriteEngine On
-		RewriteCond %{REQUEST_URI} !^/.well-known/acme-challenge [NC]
-		RewriteCond %{HTTPS} off
-		RewriteRule (.*) https://terminaladdict.com%{REQUEST_URI}
+    <VirtualHost _default_:443>
+        ServerAdmin paul@paulwillard.nz
+        DocumentRoot /var/www/html/terminaladdict.com
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        ServerName www.terminaladdict.com;
+
+        SSLEngine on
+        SSLCertificateFile /var/lib/dehydrated/certs/terminaladdict.com/fullchain.pem
+        SSLCertificateKeyFile /var/lib/dehydrated/certs/terminaladdict.com/privkey.pem
+
+        Alias /.well-known/acme-challenge /var/www/dehydrated
+        <Directory /var/www/dehydrated>
+            Options None
+            AllowOverride None
+            # Apache 2.x
+            <IfModule !mod_authz_core.c>
+                 allow,deny
+                 from all
+            </IfModule>
+            # Apache 2.4
+            <IfModule mod_authz_core.c>
+                 all granted
+            </IfModule>
+        RedirectMatch 404 "^(?!/\.well-known/acme-challenge/[\w-]{43}$)"
+        </Directory>
+        RewriteEngine On
+        RewriteCond %{REQUEST_URI} !^/.well-known/acme-challenge [NC]
+        RewriteCond %{HTTPS} off
+        RewriteRule (.*) https://terminaladdict.com%{REQUEST_URI}
+    </VirtualHost>
 </IfModule>
 <IfModule mod_ssl.c>
-        <VirtualHost _default_:443>
-                ServerAdmin paul@paulwillard.nz
-                DocumentRoot /var/www/html/terminaladdict.com
-                ErrorLog ${APACHE_LOG_DIR}/error.log
-                CustomLog ${APACHE_LOG_DIR}/access.log combined
-                ServerName terminaladdict.com;
- 
-                SSLEngine on
-                SSLCertificateFile      /var/lib/dehydrated/certs/terminaladdict.com/fullchain.pem
-                SSLCertificateKeyFile /var/lib/dehydrated/certs/terminaladdict.com/privkey.pem
-                <FilesMatch "\.(cgi|shtml|phtml|php)$">
-                	SSLOptions +StdEnvVars
-                </FilesMatch>
-                <Directory /usr/lib/cgi-bin>
-                	SSLOptions +StdEnvVars
-                </Directory>
- 
-                Alias /.well-known/acme-challenge /var/www/dehydrated
-                <Directory /var/www/dehydrated>
-                	Options None
-                	AllowOverride None
-                	# Apache 2.x
-                	<IfModule !mod_authz_core.c>
-                		 allow,deny
-                		 from all
-                	</IfModule>
-                	# Apache 2.4
-                	<IfModule mod_authz_core.c>
-                		 all granted
-                	</IfModule>
-                RedirectMatch 404 "^(?!/\.well-known/acme-challenge/[\w-]{43}$)"
-                </Directory>
-                <FilesMatch \.php$>
-                    # 2.4.10+ can proxy to unix socket
-                    SetHandler "proxy:unix:/run/php/php7.3-fpm.sock|fcgi://localhost"
-                </FilesMatch>
-        </VirtualHost>
+    <VirtualHost _default_:443>
+        ServerAdmin paul@paulwillard.nz
+        DocumentRoot /var/www/html/terminaladdict.com
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+        ServerName terminaladdict.com;
+
+        SSLEngine on
+        SSLCertificateFile /var/lib/dehydrated/certs/terminaladdict.com/fullchain.pem
+        SSLCertificateKeyFile /var/lib/dehydrated/certs/terminaladdict.com/privkey.pem
+        <FilesMatch "\.(cgi|shtml|phtml|php)$">
+            SSLOptions +StdEnvVars
+        </FilesMatch>
+        <Directory /usr/lib/cgi-bin>
+            SSLOptions +StdEnvVars
+        </Directory>
+
+        Alias /.well-known/acme-challenge /var/www/dehydrated
+        <Directory /var/www/dehydrated>
+            Options None
+            AllowOverride None
+            # Apache 2.x
+            <IfModule !mod_authz_core.c>
+                 allow,deny
+                 from all
+            </IfModule>
+            # Apache 2.4
+            <IfModule mod_authz_core.c>
+                 all granted
+            </IfModule>
+        RedirectMatch 404 "^(?!/\.well-known/acme-challenge/[\w-]{43}$)"
+        </Directory>
+        <FilesMatch \.php$>
+            # 2.4.10+ can proxy to unix socket
+            SetHandler "proxy:unix:/run/php/php7.3-fpm.sock|fcgi://localhost"
+        </FilesMatch>
+    </VirtualHost>
 </IfModule>
 {% endhighlight %}
 
