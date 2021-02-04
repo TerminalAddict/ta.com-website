@@ -64,20 +64,26 @@ $(document).ready(function(){
             });
         });
      });
-     
+
      $("span.tag").each(function(){
         var rand_fsize = Math.floor(Math.random() * 4) + 1;
         var rand_color = Math.floor(Math.random() * 5) + 1;
         $(this).addClass('display-'+rand_fsize);
         $(this).addClass('color-'+rand_color);
-     }); 
+     });
     $('a[target="_blank"]').each(function() {
         $(this).attr('rel', 'noreferrer noopener');
+        $(this).attr('data-toggle', 'tooltip');
+        $(this).attr('data-original-title', $(this).attr('href'));
     });
     var notFoundLink = $(location).attr('href');
     var newFoundLink = notFoundLink.replace('terminaladdict.com','www.loudas.com');
     $(".notfoundLink").html(newFoundLink);
     $(".notfoundLink").attr('href',newFoundLink);
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 
     // register a service worker for offline content
     var now=Date.now();
