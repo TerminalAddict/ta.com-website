@@ -29,7 +29,7 @@ class BackLinksGenerator < Jekyll::Generator
   def generate(site)
 
     all_notes = site.collections['docs'].docs
-    all_posts = site.posts
+    all_posts = site.posts.docs
     all_pages = site.pages
 
     all_docs = all_notes + all_posts + all_pages 
