@@ -14,7 +14,7 @@
           </div>
           <div class="col-md-3"> <!-- sidebar -->
             <aside>
-              <h4>Categories</h4>
+              <div class="sideBarTitle">Categories</div>
               <ul class="list-group categoriesList">
                 {% for category in site.categories %}
                 {% capture category_name %}{{ category | first }}{% endcapture %}
@@ -23,17 +23,17 @@
               </ul>
             </aside>
             <aside>
-              <h4>Archives</h4>
+              <div class="sideBarTitle">Archives</div>
 <div id="accordion" class="archivesAccordian">
 {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 {% for year in postsByYear %}
 	<div class="card">
 	  	<div class="card-header p-0" id="y{{ year.name }}">
-	      <h5 class="mb-0">
+	      <div class=" sideBarTitle mb-0">
               <button class="btn btn-link w-100 dark-blue-link p-3{% unless forloop.first %} collapsed{% endunless %}" data-toggle="collapse" data-target="#m{{ year.name }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="m{{ year.name }}">
 	          {{ year.name }}
 	        </button>
-	      </h5>
+	      </div>
 	    </div>
 	    <div id="m{{ year.name }}" class="collapse {% if forloop.first %}show{% endif %}" aria-labelledby="y{{ year.name }}" data-parent="#accordion">
 	      <div class="card-body">

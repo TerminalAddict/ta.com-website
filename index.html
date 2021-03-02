@@ -20,7 +20,7 @@ pagination:
                   <div class="row p-3 w-100">
                     <div class="col-md-12 bg-white">
                       <!-- post meta -->
-                      <h2 class="entry-title"><a itemprop="url mainEntityOfPage" href="{{site.url}}{{post.url}}"><img class="posticon" src="{{ site.url }}{{ site.icons }}{{ post.icon }}" alt="{{ post.icon }}" /><span itemprop="headline">{{post.title}}</span></a></h2>
+                      <h2 class="entry-title"><a itemprop="url mainEntityOfPage" href="{{site.url}}{{post.url}}"><img class="posticon" src="{{ site.url }}{{ site.icons }}{{ post.icon }}" alt="{{ post.icon }}" width="50" height="50" /><span itemprop="headline">{{post.title}}</span></a></h2>
                       <div class="post-meta">by 
                         <div class="d-inline author vcard" itemprop="author">
                           {% if author %}<a href="{{ site.url }}{{ author.url }}" title="Posts by {{ author.name }}" rel="author">
@@ -32,7 +32,7 @@ pagination:
                             </div>
                             <div class="d-none" itemprop="author" itemscope itemtype="https://schema.org/Person">
                                 <span itemprop="name">{{ author.name }}</span>
-                                <img src="{{ site.url }}{{author.pic}}" itemprop="image" alt="Photo of {{ author.name }}"/>
+                                <img src="{{ site.url }}{{author.pic}}" itemprop="image" width="250" height="250" alt="Photo of {{ author.name }}"/>
                                 <span itemprop="jobTitle">{{ author.position }}</span>
                             </div>
                           </a>{% endif %}
@@ -67,7 +67,7 @@ pagination:
             {% endfor %}
         {% endif %}
             <li class="page-item">
-                <a class="page-link text-nowrap">of {{ paginator.total_pages }}</a>
+                <a class="page-link text-nowrap"  href="{{ site.url  }}/page/{{ paginator.total_pages }}/index.html">of {{ paginator.total_pages }}</a>
             </li>
         {% if paginator.next_page %}
             <li class="page-item">
