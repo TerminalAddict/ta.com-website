@@ -85,18 +85,6 @@ $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
     });
 
-    // register a service worker for offline content
-    var now=Date.now();
-    if ("serviceWorker" in navigator) {
-         // navigator.serviceWorker.register('/service_worker.js').then(function() {
-         navigator.serviceWorker.register('/sw.js?'+now).then(function() {
-             // console.log('CLIENT: service worker registration complete.');
-            }, function () {
-             console.log('CLIENT: service worker registration failure.');
-            });
-    } else {
-        console.log('CLIENT: service worker is not supported.');
-    }
 });
 
 $(".ta_logo").mouseover(function(){

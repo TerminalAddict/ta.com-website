@@ -5,7 +5,7 @@ comments: true
 categories: [jekyll, development]
 icon: jekyll.svg
 ---
-I've had a project going on for a month or so to re-do a [Confluence](https://www.atlassian.com/software/confluence){: target="_blank"} wiki into Markdown files, hence why I pusblished [The Markdown Cheatsheet]({% post_url 2021-02-04-Markdown-Cheatsheet %}), and [Jekyll categories based menu]({% post_url 2021-02-03-Jekyll-Categories-Based-Dynamic-Menu %})  
+I've had a project going on for a month or so to re-do a [Confluence](https://www.atlassian.com/software/confluence){: target="_blank"} wiki into Markdown files, hence why I pusblished [The Markdown Cheatsheet]({% post_url 2021-02-04-Markdown-Cheatsheet %}), and [Jekyll categories based menu]({% post_url 2021-02-03-Jekyll-Categories-Based-Dynamic-Menu %}).  
 One thing that can be handy in a wiki is "back links" i.e. what other pages link to this page.  
 
 ## The Requirements
