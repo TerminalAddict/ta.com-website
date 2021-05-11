@@ -8,7 +8,7 @@ icon: js.svg
 ---
 I've been playing around in web development for years, in fact, the first web "application" I wrote was in 1994, the year the world wide web was available to the general public in New Zealand.  
 The last couple of years I've been focused on Progressive Web Apps (PWA's), and this includes using service workers, which are notoriously bad at breaking the refresh button in browsers.  
-Maybe another title for this post might be: How to Fix the Refresh Button When Using a Service Worker 🔄  
+Maybe another title for this post might be: **How to Fix the Refresh Button When Using a Service Worker** 🔄  
 
 ## The Backstory
 So, let's start with: I use [Google Workbox](https://developers.google.com/web/tools/workbox/){: target="_blank"}.  
@@ -17,10 +17,10 @@ They even have a [Github Repository](https://github.com/GoogleChrome/workbox){: 
 Also, I am a New Zealander (a kiwi 🥝), and I host all my websites and apps in New Zealand. In fact, I run my own hosting and internet company called [Net Enterprises Ltd](https://www.netenterprises.co.nz/){: target="_blank"}.  
 Another (I think it might be little known) fact, is New Zealand isn't connected very well with the rest of the world in terms of fibre connections. So, something in the UK that might be simple, like loading the workbox library from the CDN, turns out to be a slow experience here in New Zealand.  
 
-The punchline? I host a local copy of all the libraries I use: jQuery, Boostrap, Popper.js, Workbox, Datables, etc ...
+The punchline? I host a local copy of all the libraries I use: jQuery, Boostrap, Popper.js, Workbox, DataTables, etc ...
 
 I wanted an easy method to update my workbox library locally.  
-Fortunately, Google provide a "workbox-cli" to exactly this.
+Fortunately, Google provide a "workbox-cli" to do exactly this.
 
 You need Node installed, and npm-check-updates for my little script to work:  
 
@@ -58,7 +58,7 @@ So, a key concept for a service worker is that, to load a service worker you nee
 So, let's get to it.  
 
 ## The Service Worker Lifecycle
-Google produces some great documentation entitled [The Service Workers Lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle){: target="_blank"}, but iof you're starting out, this doc can be overwhelming.  
+Google produces some great documentation entitled [The Service Workers Lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle){: target="_blank"}, but if you're starting out, this doc can be overwhelming.  
 So I'm going to try and break this down as simply as I can (this is how I understood service workers).
 
 1. On the first visit to a PWA a service worker is installed, and some cache maybe?
@@ -71,7 +71,8 @@ So I'm going to try and break this down as simply as I can (this is how I unders
 7. On the fourth visit to the PWA the new content appears.
 
 So, there was definitely some weird thing I was missing about caching and loading new service workers.  
-This week I figured it out. I need check to see if there is a service worker in "waiting" and prompt the user. (I actually saw this in real life on Tinder 😂).  
+This week I figured it out.  
+I need check to see if there is a service worker in "waiting" and prompt the user. (I actually saw this in real life on Tinder 😂).  
 
 So back to the code:  
 ## Code in your page
@@ -134,7 +135,7 @@ The we'll fire up a new Workbox object.
 
 Here's the tricky bit .. SkipWaiting ...  
 This had me stumped for a while, mainly because I didn't really understand how service workers worked!  
-But reading through the lifecycle, kind got me to a point where I understood _just_ enough.  
+But reading through the lifecycle, kind of got me to a point where I understood _just_ enough.  
 
 We create a function showSkipWaitingPrompt that does 2 things:
 1. Send a message to the service worker that is "waiting" to skipwaiting, and just install itself.
@@ -168,7 +169,7 @@ When loading this javascript you must load it as a module in your browser:
 Notice that script tag that has type="module"?
 
 ## The Service Worker code
-Now, my understanding of service workers is probably just enough to get me in trouble, so I'd love to hear people feedback about this.  
+Now, my understanding of service workers is probably just enough to get me in trouble, so I'd love to hear people's feedback about this.  
 
 So, here goes ...  
 {% highlight javascript %}
@@ -324,4 +325,10 @@ Take a look at the [TerminalAddict.com Github repository](https://github.com/Ter
 
 Now when new data is found on this website, a prompt is offered to the user, instead of hoping the user might come back later to see the new content.  
 
+### Give me some feedback
+As I mentioned, I'd love to hear people's thoughts.  
+Service workers are very polarising in the web community, some hate them, some love them.  
+And everyone that uses them, seem to use them differently.  
+
+So drop me a message if you've got something to share.  
 
