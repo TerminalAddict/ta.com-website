@@ -72,7 +72,7 @@ So I'm going to try and break this down as simply as I can (this is how I unders
 
 So, there was definitely some weird thing I was missing about caching and loading new service workers.  
 This week I figured it out.  
-I need check to see if there is a service worker in "waiting" and prompt the user. (I actually saw this in real life on Tinder 😂).  
+I need check to see if there is a service worker in "waiting" and prompt the user. (I actually saw this in real life on Tinder, last year sometime 😂).  
 
 So back to the code:  
 ## Code in your page
