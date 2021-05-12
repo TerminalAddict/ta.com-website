@@ -325,6 +325,8 @@ Take a look at the [TerminalAddict.com Github repository](https://github.com/Ter
 
 Now when new data is found on this website, a prompt is offered to the user, instead of hoping the user might come back later to see the new content.  
 
+{% include thumbnail.html img="new_sw_install.jpg" %}  
+
 ### Give me some feedback
 As I mentioned, I'd love to hear people's thoughts.  
 Service workers are very polarising in the web community, some hate them, some love them.  
