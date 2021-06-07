@@ -1,0 +1,11 @@
+_id: c76a4d90-c7db-11eb-aaa3-bb46af1d225e
+_parent: >-
+  https://terminaladdict.com/development/2021/05/12/Making-a-Service-Worker-refresh-properly.html
+message: "So I came across an error when POSTing <br />\r\n```\r\nUncaught (in promise) TypeError: Failed to execute 'put' on 'Cache': Request method 'POST' is unsupported\r\n    at sw.js:126\r\n```\r\n<br />\r\nAfter some research I found out that workbox is trying to cache POST responses, which in my case seems a bit daft, and it seems workbox doesn't cope well with POST caching anyway. <br />\r\n<br />\r\nA small if statement in the beginning of the EventListener 'fetch' like so: <br />\r\n```\r\nself.addEventListener('fetch', function(event) {\r\n/* start small insert here */\r\n  if (event.request.method !== 'GET') {\r\n    /* Only deal with GET requests */\r\n    console.log('WORKER: fetch event ignored.', event.request.method, event.request.url);\r\n    return;\r\n  }\r\n/* small insert finished */\r\n```\r\n<br />\r\nNow workbox only caches GET requests."
+name: Paul Willard
+email: fa87575ff2e21fe16d2c1eafd8d9c7b4
+url: 'https://www.paulwillard.nz/'
+hidden: ''
+g-recaptcha-response: >-
+  03AGdBq27P8MveI422Hy7KlJFNxl83mO7XdwjfYnajfDhXQfJbcijYwxJpeSKr1-lo9_l0YjcsaL_xIGjtqcddLo-7Xe6m0nz8Wj7yNA6UYeW1ZHoafXrJb6SRo_PXnuT-tYKFRsHBPS-TScqgbeBucKeYSyJd-HNnQJo2h_KsqoH0hRbcBDCCDDeEti-D9N0U7oM7HQeujeFiFtmxwsnOh8CLEi4ZZP-jg1npC6o-eueVW2efXgfp1lRgzJIQfRW0wgA3cNbfcF4MQVOORndKnvi_w_Z1NDSMHmnnMvRDlEzNWYqRrJaGJQB-MFLgxq_cqMR92u_SaD9I5IxNBdTzOVng9UIY8B20Iwpjh2e81bsPZnJ9Zmc4uyik0Lu3-DNvykZ5sGonTgupGQt6ifIvSfPEyZ4I29BqXHlB5YNLWLQ4VQ2kLs-J5Y-S0Ofn6ZCeSqk_6anrTjqNLVrF_abNloinP4UAf-Wt4w
+date: '2021-06-07T22:00:32.643Z'
