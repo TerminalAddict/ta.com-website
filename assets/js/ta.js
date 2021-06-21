@@ -34,6 +34,13 @@ $(document).ready(function(){
             $('#back-to-top').tooltip('show');
         });
 
+    $('img.thumbnail').each(function(){
+        var currWidth = this.width;
+        var currHeight = this.height;
+        $(this).attr('height', currHeight+'px');
+        $(this).attr('width', currWidth+'px');
+    });
+
      $.ajaxSetup({ cache: false });
      $('#query').keyup(function(){
         $('.searchResults').removeClass('hidden');
