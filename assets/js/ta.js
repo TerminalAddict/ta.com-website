@@ -37,8 +37,8 @@ $(document).ready(function(){
     $('img.thumbnail').each(function(){
         var currWidth = this.width;
         var currHeight = this.height;
-        $(this).attr('height', currHeight+'px');
-        $(this).attr('width', currWidth+'px');
+        $(this).attr('height', currHeight);
+        $(this).attr('width', currWidth);
     });
 
      $.ajaxSetup({ cache: false });
