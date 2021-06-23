@@ -3,8 +3,8 @@
       {% if site.data.comments[page.slug] %}
         <!-- Start static comments -->
         <div id="comments" class="js-comments">
-          <h3 class="headline">Comments</h3>
           {% assign comments = site.data.comments[page.slug] | sort %}
+          <h3 class="headline">Comments ({{ comments.size }})</h3>
           {% for comment in comments %}
             {% assign avatar = comment[1].avatar %}
             {% assign email = comment[1].email %}
