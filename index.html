@@ -39,11 +39,15 @@ pagination:
                       </div>  |  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished dateModified">{{ post.date | date_to_string }}</time>  |  {% for category in categories %}<a class="dark-blue-link" href="{{ site.url }}/categories/#{{category|slugize}}" rel="category tag">{{category}}</a>{% if forloop.last != true %},{% endif %} {% endfor %}
                       {% if site.data.comments[post.slug] %}
                       {% assign comments = site.data.comments[post.slug] %}
-                      {% assign comments_text = comments.size %}
-                      {% else %}
-                      {% assign comments_text = "0" %}
+                      {% if comments.size == 1 %}
+                        {% assign comments_text = comments.size | append: ' Comment' %}
+                       {% else %}
+                        {% assign comments_text = comments.size | append: ' Comments' %}
                       {% endif %}
-                    <span class="float-right">{{ comments_text }} Comments</span>
+                      {% else %}
+                      {% assign comments_text = "0 Comments" %}
+                      {% endif %}
+                    <span class="float-right">{{ comments_text }}</span>
                     </div>
                     </div>
                     <div class="col-md-12 bg-white">
