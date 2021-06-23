@@ -4,7 +4,7 @@
         <!-- Start static comments -->
         <div id="comments" class="js-comments">
           {% assign comments = site.data.comments[page.slug] | sort %}
-          <h3 class="headline">Comments ({{ comments.size }})</h3>
+          <h3 class="headline">{{ comments.size }} Comments</h3>
           {% for comment in comments %}
             {% assign avatar = comment[1].avatar %}
             {% assign email = comment[1].email %}
