@@ -12,7 +12,7 @@ workbox.setConfig({
 var CACHE_NAME='{{ site.site_name | slugify }}-cache';
 
 // precache all mmy posts and pages + bundles.js
-/*
+/**/
 workbox.precaching.precacheAndRoute([
 {% for post in site.posts %}{url: '{{ post.url }}', revision: '{{ "now" | date: "%s" }}' },
 {% endfor %}{% for page in site.pages %}{% if page.url %}{url: '{{ page.url }}', revision: '{{ "now" | date: "%s" }}' },{% endif %}
@@ -20,7 +20,7 @@ workbox.precaching.precacheAndRoute([
 ], {
   directoryIndex: null,
 });
-*/
+/**/
 
 // cache images
 workbox.routing.registerRoute(
@@ -114,6 +114,7 @@ self.addEventListener('fetch', function(event) {
 });
 self.addEventListener('message', (event) => {
   console.log('Message received');
+  caches.delete(CACHE_NAME)
   if (event.data && event.data.type === 'SKIP_WAITING') {
     return self.skipWaiting();
   }
