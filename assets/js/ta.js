@@ -3,8 +3,10 @@ $(document).ready(function(){
      $(window).scroll(function () {
             if ($(this).scrollTop() > 50) {
                 $('#back-to-top').fadeIn();
+                $('#go-home').fadeIn();
             } else {
                 $('#back-to-top').fadeOut();
+                $('#go-home').fadeOut();
             }
             var st = $(this).scrollTop();
             var searchResult = $('.searchResults').is(":hidden");
