@@ -47,7 +47,7 @@ pagination:
                       {% else %}
                       {% assign comments_text = "0 Comments" %}
                       {% endif %}
-                    <span class="float-right">{{ comments_text }}</span>
+                      <span class="float-right"><a href="{{site.url}}{{post.url}}#CommentsSection" title="{{post.title}}">{{ comments_text }}</a></span>
                     </div>
                     </div>
                     <div class="col-md-12 bg-white">
