@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/TerminalAddict/jekyll-paginate-terminaladdict
-  revision: 9b3d698fae82eeb8093e2fcfb0e23eabf7be1203
+  revision: fe54a16d2c07384521033018dd57ce08d5c1642a
   specs:
-    jekyll-paginate-v2 (2.1.0)
-      jekyll (>= 3.0)
+    jekyll-paginate-v2 (3.0.0)
+      jekyll (>= 3.0, < 5.0)
 
 GIT
   remote: https://github.com/envygeeks/jekyll-assets.git
