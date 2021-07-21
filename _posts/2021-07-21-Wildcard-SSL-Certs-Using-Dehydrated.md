@@ -142,7 +142,7 @@ exit 0
 and let `chmod 755 /etc/dehydrated/wildcard_hook.sh`  
 
 > Note:
-> This bash script usses nsupdate, which is part of the dnsutils package  
+> This bash script uses nsupdate, which is part of the dnsutils package  
 > So install dnsutils if you need to  
 
 
