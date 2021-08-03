@@ -21,6 +21,17 @@
                         <a href="{{ site.url }}/categories/#{{category|slugize}}">{{category}}</a>{% if forloop.last != true %},{% endif %}
 					{% endfor %}
 
+					{% if site.data.comments[page.slug] %}
+                         {% assign comments = site.data.comments[page.slug] %}
+                           {% if comments.size == 1 %}
+                             {% assign comments_text = comments.size | append: ' Comment' %}
+                            {% else %}
+                             {% assign comments_text = comments.size | append: ' Comments' %}
+                           {% endif %}
+                         {% else %}
+                         {% assign comments_text = "0 Comments" %}
+                       {% endif %}
+                       <span class="float-right"><a href="{{site.url}}{{page.url}}#CommentsSection" title="{{page.title}} - Comments">{{ comments_text }}</a></span>
 			  {% assign author = site.authors | where: 'short_name', page.author | first %}
 			  {% if author %}
               <footer class="blockquote-footer p-0 m-0"><span>by </span>
