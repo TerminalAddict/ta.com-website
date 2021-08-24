@@ -377,7 +377,7 @@ listHosts() {
         for cat in "${categories[@]}"; do
             # Column 7 ( -lt  $localARRCOUNT ) is "blank", let's show all NON-blank categories
             if [[ $localCOUNT -gt 1 && $localCOUNT -lt $localARRCOUNT ]]; then
-                echo " what "$cat
+                echo "  "$cat
                 awk -v c1=$localCOUNT -F , '$c1 == "y" {print "   "$1}' $DATA_SRC
             fi
             ((localCOUNT++))
