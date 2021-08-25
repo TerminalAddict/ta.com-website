@@ -31,7 +31,7 @@ Sometimes I want to connect to only Debian servers, sometimes I want to connect 
 I want the ability to organise my list of servers into some kind of searchable list.  
 
 ## My Solution
-Firstly, I don't kknow whether this is the most elegant way, in fact, I'm pretty sure it's not, and I would love to hear people's suggestions.  
+Firstly, I don't know whether this is the most elegant way, in fact, I'm pretty sure it's not, and I would love to hear people's suggestions.  
 Comment below !  
 
 For this to work, you must have your ssh sorted.  
