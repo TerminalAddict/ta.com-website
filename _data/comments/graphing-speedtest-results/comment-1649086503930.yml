@@ -1,0 +1,13 @@
+_id: cbf0cf40-b42c-11ec-95e8-1328e1cbdfd0
+_parent: >-
+  https://terminaladdict.com/bash/networking/2020/09/21/graphing-speedtest-results.html
+message: >-
+  For the graphs to work with a crontab of 15 min you have to modify the value
+  600 of "DS:upload:GAUGE:600:0:U \" I put it at 1000 and everything works.
+name: Xavier
+email: 5e98c31c6fa1d5c89755f653595585b3
+url: ''
+hidden: ''
+g-recaptcha-response: >-
+  03AGdBq27-kKWJXaZ25L6rxaFXfoDEqIm3qApYCvX1uDdcRscIgUCZUCHb1GFxGXabzStuOerJvfI7YtrWowuGnfjA8NjmZqxBar9DVEGm7RAb8u5TZRBownFRzPS6B91sBWXYItg-fVms2Og3cXg3PVQRYRRK7a7eB5L4gU6Jo50D8jUekKn9NMc90Mt8rAx7gbP2-vKMOmCzFVQ7ZUmvHe_8DwS7rKGzjcr0iVx78RmX-99lB_u4b2zDtOU23kJha81my4FUfz-zRx_PKH7P0aRoApGajdS_Lu-XPdJSp9iDAzT4FpV9EwgTtnOtqR6Knw43q9PicP_sSfgpj35gwsE3OLMqX_F8zIm3dDRAO4TVSr1JwLj8gMPxrj2JgugH7Np9erP683vv7Nt_t2qsBh0vDFju1nIzjMukKIvuVII7Lz8DZAU8tqSRuOvJYrDKfuRyud1g9JiiQkrR2ZMjx5pvE8NYo2slDd3sHN7R6dQ-nSzER6rVFqEWV3qfM_NW8OdvkqetgWJ_iCxy4lCJKY-0UV8DD7Czhw
+date: '2022-04-04T15:35:03.927Z'
