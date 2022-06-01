@@ -23,16 +23,16 @@ pagination:
                       <h2 class="entry-title"><a itemprop="url mainEntityOfPage" href="{{site.url}}{{post.url}}"><img class="posticon" src="{{ site.url }}{{ site.icons }}{{ post.icon }}" alt="{{ post.icon }}" width="50" height="50" /><span itemprop="headline">{{post.title}}</span></a></h2>
                       <div class="post-meta">by 
                         <div class="d-inline author vcard" itemprop="author">
-                          {% if author %}<a href="{{ site.url }}{{ author.url }}" title="Posts by {{ author.name }}" rel="author">
+                          {% if author %}<a href="{{ site.url }}{{ author.url }}" title="Posts by {{ author.fullname }}" rel="author">
                             <div class="d-inline" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-                                <span itemprop="name" class="bg-white dark-blue-link">{{ author.name }}</span>
+                                <span itemprop="name" class="bg-white dark-blue-link">{{ author.fullname }}</span>
                                 <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject" class="hidden">
                                     <link itemprop="url" href="{{ site.url }}{{author.pic}}" />
                                 </div>
                             </div>
                             <div class="d-none" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                                <span itemprop="name">{{ author.name }}</span>
-                                <img src="{{ site.url }}{{author.pic}}" itemprop="image" width="250" height="250" alt="Photo of {{ author.name }}"/>
+                                <span itemprop="name">{{ author.fullname }}</span>
+                                <img src="{{ site.url }}{{author.pic}}" itemprop="image" width="250" height="250" alt="Photo of {{ author.fullname }}"/>
                                 <span itemprop="jobTitle">{{ author.position }}</span>
                             </div>
                           </a>{% endif %}

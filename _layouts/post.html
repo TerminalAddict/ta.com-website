@@ -38,14 +38,14 @@
                   <div class="author vcard d-inline" itemprop="author">
                       <a href="{{ site.url }}{{ author.url }}" class="text-dark" rel="author">
                           <div class="d-inline" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-                             <span itemprop="name" class="font-weight-bold">{{ author.name }}</span>
+                             <span itemprop="name" class="font-weight-bold">{{ author.fullname }}</span>
                              <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject" class="hidden">
                                <link itemprop="url" href="{{ site.url }}{{author.pic}}" />
                              </div>
                           </div>
                           <div class="d-none" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                              <span itemprop="name">{{ author.name }}</span>
-                              <img src="{{ site.url }}{{author.pic}}" itemprop="image" alt="Photo of {{ author.name }}"/>
+                              <span itemprop="name">{{ author.fullname }}</span>
+                              <img src="{{ site.url }}{{author.pic}}" itemprop="image" alt="Photo of {{ author.fullname }}"/>
                               <span itemprop="jobTitle">{{ author.position }}</span>
                           </div>
                       </a>
