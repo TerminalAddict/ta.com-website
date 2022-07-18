@@ -1,0 +1,17 @@
+_id: d74235a0-0634-11ed-8f68-c76727cb78d1
+_parent: >-
+  https://terminaladdict.com/bash/networking/2020/09/21/graphing-speedtest-results.html
+message: >-
+  This is great. I've got it running every 15 min to save some data. I'm running
+  it on a Mac and for no reason I could figure out I couldn't get cron to work,
+  so I put it into a LaunchAgent. I've gone through the RRDtool help pages and
+  can't find the answer. Is there any way to widen the bars since I only need 4
+  per hour instead of 12 with a 5 min interval? I can't figure out the setting.
+  Any help would be great.
+name: Scott
+email: d7d873006461d009b479b95805a78352
+url: ''
+hidden: ''
+g-recaptcha-response: >-
+  03ANYolqsllP8WN1-8w_6h7D0ZLJCBVbfK_DRIjhRXRkTxm0N5CR972kq5MtQMdMupJalQorNSI8mydHXZ3Wy8CcvYzss9CXYu5TgzWcl8Hcnf3176cFossGdwJfxoKeUXcseNjU9H21K39BlQdfYaQ7RArSjGln_r53XRqZr_8jk7mmORMmbBCxFfgoZACfAyL83Xboz3vX1rGLHgj6mmIGGYgXauEBTbKHCZ4fwXXsoHozGhujkmxctGJslsdt-oPCa1VgvWtq5uxaXjU_dNbvkXFv2JnscVBIRrRv0pIMh6WoN4Tq82CGrDiG_vXqLedoeVKkldyIxwQ7TmKkm1vXxcEOlLSJHzgqzTHxj8UWR8gVQSkR7LiQVSPhlgOFOnu2sV9suA0x1QwF0ngDOPghZ81TkG3rLBWySTDFA1sM-xeV0UszzoCyREX8gLuVAZ5sdm0u7xcXeQ39n_cML-I7W2axWBLzsilg
+date: '2022-07-18T00:59:14.192Z'
