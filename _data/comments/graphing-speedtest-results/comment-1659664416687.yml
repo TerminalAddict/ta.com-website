@@ -1,0 +1,15 @@
+_id: 6b3852f0-1461-11ed-946d-1983ed7ddcd9
+_parent: >-
+  https://terminaladdict.com/bash/networking/2020/09/21/graphing-speedtest-results.html
+message: >-
+  Thanks! I was about 10% into writing my own version of this, and a google on
+  how to render rrd graphs brought me here!. Saved me a ton of time. As someone
+  else mentioned, I also moved the actual call to speedtest down into the update
+  block but other than that it worked perfectly.
+name: JerWah
+email: 9a0b4587b0799929a0233c15632859b8
+url: ''
+hidden: ''
+g-recaptcha-response: >-
+  03ANYolquUTxoVedfD7-vrJmlSRUQsKluc9NVTWsnU5fIcPaN_q9O9zeZzdscHTowHFnPSplA_wlm5YDO6D4r8MsadoEBR4BP1LjQ24evabXxEW8r3ALGUBispOn6X34GhBxQPyUT_N0pWbu48F_BnrBmEGzvg3sQY93jf1YPId90G1RmwelEDu0OHJW6L9oQiNlDd5VZcMP4_ib_6k9c30sfpLdQCXJTOoG4wkf6tLFYQltDPGHu5Zh3ApfxBJoOsp7C3upIjKO2fuIwVAZBuvib38q8awKdylWXFqHewOq40PKDKqMEHsEKPt1fgcYdzRgolzM1PgQ1DjmSiPIwrAMVS3LpYGZrggypvSf1ijl2Mm4szlXOwta9_uJe2Upyz3wa0QI6H_Sj8DbGNfNHiEFpSND0xkQ2jBUpZ3f3aDl6KEEsQNOBDT2esCFR5gaq-dDMdv5uAs3jjos5NvQa4g2na1rauwO_2IXux63P_KsoxA7oPT4W1TY5FOiafsh2T2qjYUFRb4zlyut3MeXhopxJyK0K3DZX0qw
+date: '2022-08-05T01:53:36.684Z'
