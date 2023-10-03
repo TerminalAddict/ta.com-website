@@ -7,7 +7,7 @@ icon: js.svg
 title: A modal popup window in Wiki.JS
 slug: wiki-js-modal-window
 ---
-I use [Wiki.JS](https://js.wiki/){: target="_blank"} for both work and personal reasons (yes I'm one of those nerds who has a personal wiki for info about his life 😝).  
+I use [Wiki.JS](https://js.wiki/){: target="_blank"} (sometimes referred to as wikijs without the dot) for both work and personal reasons (yes I'm one of those nerds who has a personal wiki for info about his life 😝).  
 
 One of the pain points has been inserting images.  
 By default Wiki.JS emededs images as full sized.  
