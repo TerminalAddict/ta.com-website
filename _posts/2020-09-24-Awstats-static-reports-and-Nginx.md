@@ -162,7 +162,7 @@ PHPFILE="
 
 foreach(\$files as \$file) {
     if(!in_array(\$file, \$excludes)) {
-        echo '                  <li class=\'p-3\'><a data-toggle=\'tooltip\' data-original-title=\''.\$file.'\' data-placement=\'bottom\' href=\''.\$file.'\' class=\'btn btn-primary btn-lg\'>'.\$file.'</a></li>' . PHP_EOL;
+        echo '                  <li class=\'p-3\'><a data-bs-toggle=\'tooltip\' title=\''.\$file.'\' data-bs-placement=\'bottom\' href=\''.\$file.'\' class=\'btn btn-primary btn-lg\'>'.\$file.'</a></li>' . PHP_EOL;
     }
 }
 ?>

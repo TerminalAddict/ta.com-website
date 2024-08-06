@@ -82,23 +82,27 @@ $(document).ready(function(){
      });
     $('a[target="_blank"]').each(function() {
         $(this).attr('rel', 'noreferrer noopener');
-        $(this).attr('data-toggle', 'tooltip');
-        $(this).attr('data-original-title', $(this).attr('href'));
+        $(this).attr('data-bs-toggle', 'tooltip');
+        $(this).attr('title', $(this).attr('href'));
     });
     var notFoundLink = $(location).attr('href');
     var newFoundLink = notFoundLink.replace('terminaladdict.com','www.loudas.com');
     $(".notfoundLink").html(newFoundLink);
     $(".notfoundLink").attr('href',newFoundLink);
 
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
+    // $(function () {
+        // $('[data-toggle="tooltip"]').tooltip();
+    // });
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 
 });
 
-$(".ta_logo").mouseover(function(){
-        $(this).tooltip('show');
-});
+// $(".ta_logo").mouseover(function(){
+        // $(this).tooltip('show');
+// });
 
 $('a[data-mail]').on('click', function() {
         window.location = 'mailto:' + $(this).data('mail')+'@paulwillard.nz' + '?subject=Contact from website';
