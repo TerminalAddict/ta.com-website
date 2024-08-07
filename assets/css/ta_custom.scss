@@ -436,7 +436,8 @@ span.notifyText {
     text-shadow: 2px 2px 5px #000;
 }
 
-a, .pagination a.page-link, .dark-blue-link { color: #004A94; }
+a, .pagination a.page-link, .dark-blue-link { color: #004A94; text-decoration: none; }
+a:hover { text-decoration: underline;  }
 .pagination a.active, .dark-blue-bg { background-color: #004A94; }
 
 .font0 { font-size: 0 !important ;}

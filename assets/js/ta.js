@@ -105,6 +105,7 @@ $('a[data-mail]').on('click', function() {
 });
 
 $('.searchResults .close').on('click', function(){
+    event.preventDefault();
     $('.searchResults').addClass('hidden');
     $('.searchBar').css('height', 'auto');
     $('.searchBar').addClass('fadeOut');
