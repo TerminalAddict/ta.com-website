@@ -425,12 +425,14 @@ span.notifyText {
 }
 /* on/off */
 
+/*
 .color-1 { @extend .text-primary; }
 .color-2 { @extend .text-success; }
 .color-3 { @extend .text-danger; }
 .color-4 { @extend .text-warning; }
 .color-5 { @extend .text-info; }
 .color-6 { @extend .text-secondary; }
+*/
 
 .featuredImage span.tag {
     text-shadow: 2px 2px 5px #000;
@@ -487,6 +489,7 @@ a.ta_logo:hover {
 }
 
 .thankbox {
+  /*
 	@extend .col-md-8;
 	@extend .mx-auto;
 	@extend .bg-success;
@@ -495,6 +498,7 @@ a.ta_logo:hover {
 	@extend .text-dark;
 	@extend .p-2;
 	@extend .mb-2;
+    */
 	background: rgba(0,255,0,0.5) !important;
 	border: 5px dashed #538756 !important;
 }
